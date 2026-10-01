@@ -140,7 +140,8 @@ def test_outputs_are_well_formed(diagnostics):
     assert (isco["n_partial"] <= isco["n_soc"]).all()
     assert isco.loc[isco["n_soc"] == 1, "aioe_sd"].eq(0).all()
     assert isco["n_soc"].max() == PUBLISHED["soc_per_isco_max"]
-    assert isco["soc_codes"].str.split("|").str.len().equals(isco["n_soc"])
+    counted = isco["soc_codes"].str.split("|").str.len()
+    assert (counted.to_numpy() == isco["n_soc"].to_numpy()).all()
 
 
 def test_pipeline_is_deterministic(diagnostics):
