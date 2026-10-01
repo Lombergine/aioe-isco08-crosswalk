@@ -6,6 +6,8 @@ the transfer.
 
 Aditya Garg. Built 1 October 2026.
 
+![AIOE carried onto ISCO-08: the ranking transfers, the individual scores carry bundling noise](docs/transfer_error.png)
+
 ## Why this exists
 
 The AIOE score of Felten, Raj and Seamans (2021) is defined on six-digit 2010
@@ -48,6 +50,40 @@ the variance sits between codes and every aggregation rule tested produces
 almost the same ordering. The individual scores are shakier than the ranking,
 because most pairs are partial matches and some ISCO codes bundle occupations
 that disagree sharply about their own exposure.
+
+## Using it
+
+`out/isco08_aioe.csv` is the file most people want. One row per ISCO-08 unit
+group, joined on a four-digit code held as text so leading zeros survive.
+
+```python
+import pandas as pd
+
+cw = pd.read_csv("out/isco08_aioe.csv", dtype={"isco_08": str})
+lfs = pd.read_csv("your_labour_force_survey.csv", dtype={"isco08": str})
+
+df = lfs.merge(cw, left_on="isco08", right_on="isco_08", how="left")
+
+# Drop the codes where the bundled occupations disagree badly before
+# using the score as if it described one job.
+clean = df[df["aioe_sd"] < 0.5]
+```
+
+| Column | Meaning |
+|---|---|
+| `isco_08` | Four-digit ISCO-08 unit group, as text |
+| `n_soc` | How many 2010 SOC occupations feed this code |
+| `n_partial` | How many of those are partial rather than full matches |
+| `aioe_mean` | Mean AIOE of the contributing occupations. The headline score |
+| `aioe_median` | Median, for when one outlier occupation drags the mean |
+| `aioe_min`, `aioe_max` | The extremes bundled into this code |
+| `aioe_sd` | Standard deviation within the code. Zero when `n_soc` is 1 |
+| `aioe_range` | `aioe_max` minus `aioe_min` |
+| `soc_codes` | The contributing SOC codes, pipe separated |
+
+AIOE is standardised across occupations, so `aioe_sd` is directly comparable to
+1. A code with `aioe_sd` of 0.5 carries transfer noise half as large as the
+entire signal, and the choice of threshold belongs to whoever is using it.
 
 ## The problem the crosswalk has to face
 
@@ -169,8 +205,11 @@ the reduced file is trusted rather than the original being required.
 
 ```
 pip install -r requirements.txt
-python src/build_crosswalk.py
+make all
 ```
+
+`make all` rebuilds the crosswalk, redraws the figure and runs the tests. The
+individual targets are `make build`, `make figure` and `make test`.
 
 Outputs land in `out/` and are committed, so the crosswalk can be used without
 running anything:
@@ -180,8 +219,37 @@ running anything:
 - `diagnostics.json` every number quoted above
 - `unmatched_soc.csv` the three AIOE occupations the crosswalk never reaches
 
+## Checking it rather than believing it
+
+```
+make test
+```
+
+Sixteen tests, and they do more than check that the code runs.
+
+The integrity tests confirm the inputs are what this README says they are. AIOE
+still has mean 0 and standard deviation 1 across 774 occupations. The crosswalk
+still holds 1,123 unique pairs, split 970 partial to 153 full.
+
+The reproduction tests re-run the pipeline and compare every published figure
+against the table above, including the ICC, the within-code spread and the
+thousand-draw resampling check. If a number in this README drifts from what the
+code produces, the suite fails.
+
+The method tests are the ones that matter most. A reproduction test only proves
+the code still does what it did yesterday, which is no comfort if it was wrong
+yesterday. So the variance decomposition is run against cases whose answers are
+known in advance: groups with no internal disagreement must return an ICC of
+exactly 1, groups with identical means must return 0, and synthetic data built
+with a between-to-within variance ratio of 4 to 1 must recover 0.8. One test
+checks that a two-digit ISCO major group is dropped rather than zero-padded
+into a unit group that means something else, which is the error that would
+quietly corrupt the entire mapping.
+
 `tests/FIXTURE_ISCO_SOC_Crosswalk.xlsx` holds invented rows in the BLS layout.
-It exists to exercise the parser and is never used as data.
+It exercises the workbook parser, it is labelled as invented, and it is never
+used as data. A test asserts that the reader for the committed CSV refuses that
+workbook rather than mangling it.
 
 ## Citation
 
