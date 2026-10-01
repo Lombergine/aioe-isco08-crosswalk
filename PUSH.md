@@ -1,24 +1,31 @@
 # Pushing this to GitHub
 
-The repository already has two commits. Nothing needs to be rebuilt.
+The repository is already created at
 
-1. Create an empty repository on GitHub. No README, no .gitignore, no licence,
-   since this repository already has all three. Suggested name:
+    https://github.com/Lombergine/aioe-isco08-crosswalk
 
-       aioe-isco08-crosswalk
+and the remote is already configured in this folder. You do not need to set
+anything up.
 
-2. From inside this folder:
+From inside this folder, run:
 
 ```
-git remote add origin https://github.com/YOUR_USERNAME/aioe-isco08-crosswalk.git
-git branch -M main
+git pull --rebase origin main
 git push -u origin main
 ```
 
-3. In the repository settings, set the description to:
+The first command picks up the single `.gitattributes` commit that already
+exists on GitHub. The second pushes everything else.
 
-       AIOE occupational AI-exposure scores carried from 2010 SOC onto ISCO-08,
-       with the transfer error reported rather than averaged away.
+If git asks for a password, use a personal access token rather than your
+account password. GitHub stopped accepting passwords for this in 2021.
 
-That is all. The outputs in `out/` are committed, so the crosswalk is usable
-from the repository page without anyone running the pipeline.
+## If you would rather not use the terminal
+
+1. Unpack this archive.
+2. Go to https://github.com/Lombergine/aioe-isco08-crosswalk/upload/main
+3. Drag the `crosswalk` folder's contents onto that page. GitHub keeps the
+   subfolder structure when you drag a folder.
+4. Commit.
+
+This route loses the commit history but puts every file in the right place.
