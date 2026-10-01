@@ -1,0 +1,55 @@
+{
+  "sources": {
+    "aioe": "Felten, Raj and Seamans (2021), AIOE_DataAppendix.xlsx, Appendix A",
+    "crosswalk": "ISCO_SOC_Crosswalk.csv",
+    "employment_weights": "absent"
+  },
+  "counts": {
+    "aioe_soc_codes": 774,
+    "crosswalk_pairs": 1123,
+    "crosswalk_pairs_with_aioe": 1030,
+    "isco_codes_covered": 422,
+    "isco_codes_single_soc": 160,
+    "isco_codes_multi_soc": 262,
+    "aioe_soc_not_in_crosswalk": 3,
+    "soc_codes_in_crosswalk": 838
+  },
+  "match_type": {
+    "pairs_full": 153,
+    "pairs_partial": 970,
+    "share_pairs_partial": 0.8637577916295637
+  },
+  "mapping_degree": {
+    "soc_per_isco_mean": 2.440758293838863,
+    "soc_per_isco_max": 35,
+    "isco_per_soc_mean": 1.3400954653937946,
+    "isco_per_soc_max": 17,
+    "share_isco_multi_soc": 0.6208530805687204
+  },
+  "transfer_error": {
+    "mean_within_isco_sd": 0.34480238324239104,
+    "median_within_isco_range": 0.5514436,
+    "max_within_isco_range": 2.6383,
+    "aioe_sd_overall": 0.9999999991597438,
+    "variance_decomposition": {
+      "icc": 0.8299083671918324,
+      "var_between": 0.7943854048153327,
+      "var_within": 0.1628111197881015,
+      "ms_between": 2.0972109346898486,
+      "ms_within": 0.1628111197881015,
+      "n_groups": 422,
+      "n_obs": 1030
+    }
+  },
+  "rank_stability": {
+    "mean_vs_median": 0.9964708880098645,
+    "mean_vs_min": 0.9680949806674897,
+    "mean_vs_max": 0.9582626331198275,
+    "random_single_pick_spearman": {
+      "mean": 0.9599066858280263,
+      "p05": 0.9553026179733184,
+      "p95": 0.9640626815673133,
+      "n_draws": 1000
+    }
+  }
+}

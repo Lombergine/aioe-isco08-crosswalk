@@ -1,0 +1,1031 @@
+isco_08,soc_2010,match_type,occupation_title,aioe
+1112,11-1011,partial,Chief Executives,1.334246
+1112,11-1021,partial,General and Operations Managers,0.5748773
+1112,11-9161,partial,Emergency Management Directors,1.030768
+1113,11-1011,partial,Chief Executives,1.334246
+1114,11-1021,partial,General and Operations Managers,0.5748773
+1114,11-2031,partial,Public Relations Managers,1.293689
+1114,11-9199,partial,"Managers, All Other",0.9646872
+1120,11-1011,partial,Chief Executives,1.334246
+1120,11-1021,partial,General and Operations Managers,0.5748773
+1211,11-3031,full,Financial Managers,1.446232
+1212,11-3111,partial,Compensation and Benefits Managers,1.298235
+1212,11-3121,partial,Human Resources Managers,1.320417
+1212,11-3131,partial,Training and Development Managers,1.284423
+1213,11-9199,full,"Managers, All Other",0.9646872
+1219,11-2031,partial,Public Relations Managers,1.293689
+1219,11-3011,partial,Administrative Services Managers,0.7398278
+1219,11-3061,partial,Purchasing Managers,1.423426
+1219,11-9061,partial,Funeral Directors,0.3719018
+1219,11-9131,partial,Postmasters and Mail Superintendents,0.8233757
+1219,11-9199,partial,"Managers, All Other",0.9646872
+1221,11-2021,partial,Marketing Managers,1.315032
+1221,11-2022,partial,Sales Managers,1.26628
+1222,11-2011,partial,Advertising and Promotions Managers,1.294387
+1222,11-2031,partial,Public Relations Managers,1.293689
+1223,11-9041,partial,Engineering Managers,0.8370105
+1223,11-9121,partial,Natural Sciences Managers,1.327906
+1311,11-9013,full,"Farmers, Ranchers, and Other Agricultural Managers",-0.1443684
+1312,11-9013,full,"Farmers, Ranchers, and Other Agricultural Managers",-0.1443684
+1321,11-3051,full,Industrial Production Managers,0.5086878
+1322,11-9199,full,"Managers, All Other",0.9646872
+1323,11-9021,full,Construction Managers,1.029139
+1324,11-3071,full,"Transportation, Storage, and Distribution Managers",0.8907923
+1330,11-3021,full,Computer and Information Systems Managers,1.059853
+1341,11-9031,full,"Education Administrators, Preschool and Child Care Center/Program",0.838007
+1342,11-9111,full,Medical and Health Services Managers,1.260259
+1343,11-1021,partial,General and Operations Managers,0.5748773
+1343,11-9111,partial,Medical and Health Services Managers,1.260259
+1344,11-9151,full,Social and Community Service Managers,1.156153
+1345,11-9032,partial,"Education Administrators, Elementary and Secondary School",1.048811
+1345,11-9033,partial,"Education Administrators, Postsecondary",1.461149
+1345,11-9039,partial,"Education Administrators, All Other",0.3541265
+1346,11-1021,partial,General and Operations Managers,0.5748773
+1346,11-3031,partial,Financial Managers,1.446232
+1349,11-9199,full,"Managers, All Other",0.9646872
+1411,11-9081,full,Lodging Managers,0.4021726
+1412,11-9051,full,Food Service Managers,-0.1213112
+1420,11-1021,full,General and Operations Managers,0.5748773
+1431,11-9071,partial,Gaming Managers,0.8299207
+1431,11-9199,partial,"Managers, All Other",0.9646872
+1439,11-9199,full,"Managers, All Other",0.9646872
+2111,19-2011,partial,Astronomers,1.373737
+2111,19-2012,partial,Physicists,1.345736
+2112,19-2021,full,Atmospheric and Space Scientists,1.373917
+2113,19-2031,partial,Chemists,0.5011251
+2113,19-2032,partial,Materials Scientists,1.032757
+2114,19-2042,partial,"Geoscientists, Except Hydrologists and Geographers",0.7143481
+2114,19-2043,partial,Hydrologists,0.6405071
+2120,15-2011,partial,Actuaries,1.516474
+2120,15-2021,partial,Mathematicians,1.472319
+2120,15-2031,partial,Operations Research Analysts,1.40002
+2120,15-2041,partial,Statisticians,1.382724
+2120,19-3022,partial,Survey Researchers,1.42653
+2131,19-1011,partial,Animal Scientists,1.041358
+2131,19-1012,partial,Food Scientists and Technologists,0.7943575
+2131,19-1013,partial,Soil and Plant Scientists,0.6320696
+2131,19-1021,partial,Biochemists and Biophysicists,0.9060509
+2131,19-1022,partial,Microbiologists,0.6955647
+2131,19-1023,partial,Zoologists and Wildlife Biologists,0.3175953
+2131,19-1029,partial,"Biological Scientists, All Other",1.010193
+2131,19-1041,partial,Epidemiologists,1.436287
+2131,19-1042,partial,"Medical Scientists, Except Epidemiologists",1.279928
+2132,19-1013,partial,Soil and Plant Scientists,0.6320696
+2132,19-1032,partial,Foresters,-0.184381
+2132,25-9021,partial,Farm and Home Management Advisors,0.8604031
+2133,19-1031,partial,Conservation Scientists,0.0690313
+2133,19-2041,partial,"Environmental Scientists and Specialists, Including Health",1.014113
+2141,17-2112,full,Industrial Engineers,1.13787
+2142,17-2051,full,Civil Engineers,1.282867
+2143,17-2081,full,Environmental Engineers,1.343561
+2144,17-2011,partial,Aerospace Engineers,1.338738
+2144,17-2021,partial,Agricultural Engineers,0.9409636
+2144,17-2121,partial,Marine Engineers and Naval Architects,0.5472173
+2144,17-2141,partial,Mechanical Engineers,1.004709
+2145,17-2041,full,Chemical Engineers,1.341336
+2146,17-2131,partial,Materials Engineers,1.037278
+2146,17-2151,partial,"Mining and Geological Engineers, Including Mining Safety Engineers",1.34695
+2146,17-2171,partial,Petroleum Engineers,1.247779
+2146,19-2032,partial,Materials Scientists,1.032757
+2149,17-2031,partial,Biomedical Engineers,0.9874239
+2149,17-2111,partial,"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",0.9948935
+2149,17-2131,partial,Materials Engineers,1.037278
+2149,17-2161,partial,Nuclear Engineers,1.303009
+2149,17-2199,partial,"Engineers, All Other",0.787566
+2151,17-2071,full,Electrical Engineers,1.126725
+2152,17-2061,partial,Computer Hardware Engineers,1.141812
+2152,17-2072,partial,"Electronics Engineers, Except Computer",0.6654578
+2153,17-2072,full,"Electronics Engineers, Except Computer",0.6654578
+2161,17-1011,full,"Architects, Except Landscape and Naval",1.047142
+2162,17-1012,full,Landscape Architects,1.034388
+2163,27-1021,partial,Commercial and Industrial Designers,0.867039
+2163,27-1022,partial,Fashion Designers,0.5801539
+2164,19-3051,full,Urban and Regional Planners,1.227516
+2165,17-1021,partial,Cartographers and Photogrammetrists,0.8169979
+2165,17-1022,partial,Surveyors,0.1460606
+2166,27-1014,partial,Multi-Media Artists and Animators,0.7058651
+2166,27-1024,partial,Graphic Designers,0.7156958
+2211,29-1062,partial,Family and General Practitioners,1.031925
+2211,29-1063,partial,"Internists, General",1.046167
+2211,29-1065,partial,"Pediatricians, General",1.126144
+2211,29-1069,partial,"Physicians and Surgeons, All Other",0.7086123
+2212,29-1061,partial,Anesthesiologists,0.2349698
+2212,29-1064,partial,Obstetricians and Gynecologists,0.2803215
+2212,29-1066,partial,Psychiatrists,1.280753
+2212,29-1067,partial,Surgeons,-0.0504534
+2212,29-1069,partial,"Physicians and Surgeons, All Other",0.7086123
+2221,29-1141,partial,Registered Nurses,0.2294097
+2221,29-1151,partial,Nurse Anesthetists,0.2413191
+2221,29-1171,partial,Nurse Practitioners,0.1900572
+2222,29-1161,full,Nurse Midwives,0.1966265
+2230,29-1199,full,"Health Diagnosing and Treating Practitioners, All Other",0.7109566
+2240,29-1071,full,Physician Assistants,0.1059147
+2250,29-1131,full,Veterinarians,-0.0749958
+2261,29-1021,partial,"Dentists, General",-0.1813301
+2261,29-1022,partial,Oral and Maxillofacial Surgeons,-0.2389668
+2261,29-1023,partial,Orthodontists,0.1616631
+2261,29-1024,partial,Prosthodontists,-0.1561403
+2262,29-1051,full,Pharmacists,0.6058705
+2263,21-1091,partial,Health Educators,0.691658
+2263,29-9011,partial,Occupational Health and Safety Specialists,0.8349371
+2264,29-1123,partial,Physical Therapists,-0.3581922
+2264,29-1128,partial,Exercise Physiologists,-0.0331901
+2265,29-1031,full,Dietitians and Nutritionists,1.342809
+2266,29-1127,partial,Speech-Language Pathologists,1.146267
+2266,29-1181,partial,Audiologists,0.6329063
+2267,29-1041,full,Optometrists,0.5040194
+2269,29-1011,partial,Chiropractors,-0.1911757
+2269,29-1081,partial,Podiatrists,0.6279185
+2269,29-1122,partial,Occupational Therapists,0.1151615
+2269,29-1125,partial,Recreational Therapists,0.2190109
+2269,29-1199,partial,"Health Diagnosing and Treating Practitioners, All Other",0.7109566
+2269,29-9092,partial,Genetic Counselors,1.527667
+2310,25-1011,partial,"Business Teachers, Postsecondary",1.349314
+2310,25-1021,partial,"Computer Science Teachers, Postsecondary",1.277778
+2310,25-1022,partial,"Mathematical Science Teachers, Postsecondary",1.338676
+2310,25-1031,partial,"Architecture Teachers, Postsecondary",1.222022
+2310,25-1032,partial,"Engineering Teachers, Postsecondary",1.351133
+2310,25-1041,partial,"Agricultural Sciences Teachers, Postsecondary",0.7546685
+2310,25-1042,partial,"Biological Science Teachers, Postsecondary",1.227677
+2310,25-1043,partial,"Forestry and Conservation Science Teachers, Postsecondary",1.260278
+2310,25-1051,partial,"Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",1.306156
+2310,25-1052,partial,"Chemistry Teachers, Postsecondary",1.333947
+2310,25-1053,partial,"Environmental Science Teachers, Postsecondary",1.347519
+2310,25-1054,partial,"Physics Teachers, Postsecondary",1.044191
+2310,25-1061,partial,"Anthropology and Archeology Teachers, Postsecondary",1.321694
+2310,25-1062,partial,"Area, Ethnic, and Cultural Studies Teachers, Postsecondary",1.308699
+2310,25-1063,partial,"Economics Teachers, Postsecondary",1.319012
+2310,25-1064,partial,"Geography Teachers, Postsecondary",1.318899
+2310,25-1065,partial,"Political Science Teachers, Postsecondary",1.368397
+2310,25-1066,partial,"Psychology Teachers, Postsecondary",1.33366
+2310,25-1067,partial,"Sociology Teachers, Postsecondary",1.349229
+2310,25-1071,partial,"Health Specialties Teachers, Postsecondary",0.924754
+2310,25-1072,partial,"Nursing Instructors and Teachers, Postsecondary",0.5170682
+2310,25-1081,partial,"Education Teachers, Postsecondary",1.192988
+2310,25-1082,partial,"Library Science Teachers, Postsecondary",1.386292
+2310,25-1111,partial,"Criminal Justice and Law Enforcement Teachers, Postsecondary",1.389999
+2310,25-1112,partial,"Law Teachers, Postsecondary",1.35645
+2310,25-1113,partial,"Social Work Teachers, Postsecondary",1.347327
+2310,25-1121,partial,"Art, Drama, and Music Teachers, Postsecondary",0.7582769
+2310,25-1122,partial,"Communications Teachers, Postsecondary",1.347435
+2310,25-1123,partial,"English Language and Literature Teachers, Postsecondary",1.417833
+2310,25-1124,partial,"Foreign Language and Literature Teachers, Postsecondary",1.33412
+2310,25-1125,partial,"History Teachers, Postsecondary",1.43749
+2310,25-1126,partial,"Philosophy and Religion Teachers, Postsecondary",1.363522
+2310,25-1191,partial,Graduate Teaching Assistants,1.111356
+2310,25-1192,partial,"Home Economics Teachers, Postsecondary",1.211652
+2310,25-1193,partial,"Recreation and Fitness Studies Teachers, Postsecondary",1.16489
+2320,25-1194,partial,"Vocational Education Teachers, Postsecondary",0.1622185
+2320,25-2023,partial,"Vocational Education Teachers, Middle School",0.5199191
+2320,25-2032,partial,"Vocational Education Teachers, Secondary School",0.3734505
+2330,25-2031,full,"Secondary School Teachers, Except Special and Vocational Education",1.191325
+2341,25-2021,partial,"Elementary School Teachers, Except Special Education",0.8869491
+2341,25-2022,partial,"Middle School Teachers, Except Special and Vocational Education",1.286445
+2342,25-2011,partial,"Preschool Teachers, Except Special Education",0.0306372
+2342,25-2012,partial,"Kindergarten Teachers, Except Special Education",0.3644047
+2351,25-9031,full,Instructional Coordinators,1.301855
+2352,25-2051,partial,"Special Education Teachers, Preschool",0.3750564
+2352,25-2052,partial,"Special Education Teachers, Kindergarten and Elementary School",0.7357486
+2352,25-2053,partial,"Special Education Teachers, Middle School",1.296072
+2352,25-2054,partial,"Special Education Teachers, Secondary School",0.9587653
+2352,25-2059,partial,"Special Education Teachers, All Other",-0.6632917
+2353,25-3011,partial,"Adult Literacy, Remedial Education, and GED Teachers and Instructors",1.348951
+2353,25-3021,partial,Self-Enrichment Education Teachers,0.526352
+2353,25-3099,partial,"Teachers and Instructors, All Other",1.32533
+2354,25-3021,full,Self-Enrichment Education Teachers,0.526352
+2355,25-3021,partial,Self-Enrichment Education Teachers,0.526352
+2355,25-3099,partial,"Teachers and Instructors, All Other",1.32533
+2356,13-1151,full,Training and Development Specialists,1.198409
+2359,21-1012,partial,"Educational, Vocational, and School Counselors",0.9739287
+2359,25-3099,partial,"Teachers and Instructors, All Other",1.32533
+2411,13-2011,partial,Accountants and Auditors,1.481956
+2411,13-2031,partial,Budget Analysts,1.502988
+2411,13-2082,partial,Tax Preparers,1.29371
+2412,13-2051,partial,Financial Analysts,1.380615
+2412,13-2052,partial,Personal Financial Advisors,1.400749
+2413,13-2041,partial,Credit Analysts,1.345268
+2413,13-2051,partial,Financial Analysts,1.380615
+2413,13-2061,partial,Financial Examiners,1.526064
+2421,13-1081,partial,Logisticians,1.297303
+2421,13-1111,partial,Management Analysts,1.432417
+2422,13-1199,full,"Business Operations Specialists, All Other",1.047687
+2423,13-1071,partial,"Employment, Recruitment, and Placement Specialists",1.36005
+2423,13-1075,partial,Labor Relations Specialists,1.334834
+2423,13-1141,partial,"Compensation, Benefits, and Job Analysis Specialists",1.440985
+2423,21-1012,partial,"Educational, Vocational, and School Counselors",0.9739287
+2424,13-1151,full,Training and Development Specialists,1.198409
+2431,13-1161,partial,Market Research Analysts and Marketing Specialists,1.426757
+2431,27-3043,partial,Writers and Authors,0.9879274
+2432,27-3031,full,Public Relations Specialists,1.284927
+2433,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+2433,41-4011,partial,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",0.8911985
+2434,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+2434,41-4011,partial,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",0.8911985
+2434,41-9031,partial,Sales Engineers,1.145416
+2511,15-1111,partial,Computer and Information Research Scientists,1.154269
+2511,15-1121,partial,Computer Systems Analysts,1.19815
+2512,15-1132,partial,"Software Developers, Applications",1.200923
+2512,15-1133,partial,"Software Developers, Systems Software",1.283308
+2513,15-1134,full,Web Developers,1.089463
+2514,15-1131,full,Computer Programmers,1.271506
+2519,15-1199,full,"Computer Occupations, All Other",1.232705
+2521,15-1141,full,Database Administrators,1.284863
+2522,15-1142,full,Network and Computer Systems Administrators,0.7895315
+2523,15-1143,full,Computer Network Architects,0.5803306
+2529,15-1122,partial,Information Security Analysts,1.250146
+2529,15-1199,partial,"Computer Occupations, All Other",1.232705
+2611,23-1011,full,Lawyers,1.328783
+2612,23-1021,partial,"Administrative Law Judges, Adjudicators, and Hearing Officers",1.374714
+2612,23-1023,partial,"Judges, Magistrate Judges, and Magistrates",1.496494
+2619,23-1022,full,"Arbitrators, Mediators, and Conciliators",1.431593
+2621,25-4011,partial,Archivists,0.6765602
+2621,25-4012,partial,Curators,0.7366658
+2622,25-4021,partial,Librarians,1.037039
+2622,25-9011,partial,Audio-Visual Collections Specialists,0.4508702
+2631,19-3011,full,Economists,1.403764
+2632,19-3041,partial,Sociologists,1.411125
+2632,19-3091,partial,Anthropologists and Archeologists,0.6965665
+2632,19-3092,partial,Geographers,1.436298
+2633,19-3093,partial,Historians,1.098921
+2633,19-3094,partial,Political Scientists,1.418863
+2633,19-3099,partial,"Social Scientists and Related Workers, All Other",1.328048
+2634,19-3031,partial,"Clinical, Counseling, and School Psychologists",1.456361
+2634,19-3032,partial,Industrial-Organizational Psychologists,1.402475
+2634,19-3039,partial,"Psychologists, All Other",1.389854
+2635,21-1011,partial,Substance Abuse and Behavioral Disorder Counselors,1.030841
+2635,21-1013,partial,Marriage and Family Therapists,1.367434
+2635,21-1014,partial,Mental Health Counselors,1.34239
+2635,21-1015,partial,Rehabilitation Counselors,0.5025014
+2635,21-1021,partial,"Child, Family, and School Social Workers",0.7761707
+2635,21-1022,partial,Medical and Public Health Social Workers,0.9339648
+2635,21-1023,partial,Mental Health and Substance Abuse Social Workers,1.119216
+2635,21-1092,partial,Probation Officers and Correctional Treatment Specialists,0.5272448
+2636,21-2011,partial,Clergy,1.282559
+2636,21-2021,partial,"Directors, Religious Activities and Education",1.210922
+2641,27-3041,partial,Editors,1.128221
+2641,27-3042,partial,Technical Writers,1.184001
+2641,27-3043,partial,Writers and Authors,0.9879274
+2642,27-3022,partial,Reporters and Correspondents,1.186679
+2642,27-3041,partial,Editors,1.128221
+2643,19-3099,partial,"Social Scientists and Related Workers, All Other",1.328048
+2643,27-3091,partial,Interpreters and Translators,1.111319
+2651,27-1012,partial,Craft Artists,-0.9295284
+2651,27-1013,partial,"Fine Artists, Including Painters, Sculptors, and Illustrators",-0.5690498
+2652,27-2041,partial,Music Directors and Composers,0.8829641
+2652,27-2042,partial,Musicians and Singers,-0.0040058
+2653,27-2031,partial,Dancers,-2.669758
+2653,27-2032,partial,Choreographers,-1.575769
+2654,27-1011,partial,Art Directors,1.02251
+2654,27-2012,partial,Producers and Directors,0.9388108
+2654,27-4032,partial,Film and Video Editors,0.985707
+2655,27-2011,full,Actors,0.1590935
+2656,27-3011,partial,Radio and Television Announcers,0.8493547
+2656,27-3012,partial,Public Address System and Other Announcers,0.6650665
+2656,27-3021,partial,Broadcast News Analysts,1.163517
+3111,19-4031,partial,Chemical Technicians,0.0628057
+3111,19-4041,partial,Geological and Petroleum Technicians,0.0832659
+3111,19-4099,partial,"Life, Physical, and Social Science Technicians, All Other",0.4501044
+3112,17-3022,partial,Civil Engineering Technicians,0.9323219
+3112,17-3031,partial,Surveying and Mapping Technicians,0.0852324
+3112,33-1021,partial,First-Line Supervisors/Managers of Fire Fighting and Prevention Workers,-0.593021
+3112,33-2021,partial,Fire Inspectors and Investigators,0.062793
+3112,47-4011,partial,Construction and Building Inspectors,0.2860245
+3113,17-3023,partial,Electrical and Electronic Engineering Technicians,0.3515252
+3113,17-3024,partial,Electro-Mechanical Technicians,-0.3040507
+3114,17-3023,full,Electrical and Electronic Engineering Technicians,0.3515252
+3115,17-3021,partial,Aerospace Engineering and Operations Technicians,0.3909402
+3115,17-3024,partial,Electro-Mechanical Technicians,-0.3040507
+3115,17-3027,partial,Mechanical Engineering Technicians,-0.1192367
+3115,17-3029,partial,"Engineering Technicians, Except Drafters, All Other",0.1941278
+3116,17-3029,full,"Engineering Technicians, Except Drafters, All Other",0.1941278
+3117,17-3029,partial,"Engineering Technicians, Except Drafters, All Other",0.1941278
+3117,19-4041,partial,Geological and Petroleum Technicians,0.0832659
+3118,17-3011,partial,Architectural and Civil Drafters,0.9233925
+3118,17-3012,partial,Electrical and Electronics Drafters,0.910166
+3118,17-3013,partial,Mechanical Drafters,0.8410071
+3118,27-1013,partial,"Fine Artists, Including Painters, Sculptors, and Illustrators",-0.5690498
+3119,17-3025,partial,Environmental Engineering Technicians,0.0438054
+3119,17-3026,partial,Industrial Engineering Technicians,0.6106679
+3119,17-3029,partial,"Engineering Technicians, Except Drafters, All Other",0.1941278
+3119,19-4051,partial,Nuclear Technicians,0.1696743
+3119,19-4092,partial,Forensic Science Technicians,0.2400518
+3119,19-4099,partial,"Life, Physical, and Social Science Technicians, All Other",0.4501044
+3119,33-1021,partial,First-Line Supervisors/Managers of Fire Fighting and Prevention Workers,-0.593021
+3119,33-2021,partial,Fire Inspectors and Investigators,0.062793
+3119,33-2022,partial,Forest Fire Inspectors and Prevention Specialists,-0.2144127
+3119,53-6041,partial,Traffic Technicians,0.3995872
+3121,47-1011,full,First-Line Supervisors/Managers of Construction Trades and Extraction Workers,-0.3054048
+3122,51-1011,full,First-Line Supervisors/Managers of Production and Operating Workers,-0.0845282
+3123,47-1011,full,First-Line Supervisors/Managers of Construction Trades and Extraction Workers,-0.3054048
+3131,51-1011,partial,First-Line Supervisors/Managers of Production and Operating Workers,-0.0845282
+3131,51-8011,partial,Nuclear Power Reactor Operators,0.7705302
+3131,51-8012,partial,Power Distributors and Dispatchers,0.5012214
+3131,51-8013,partial,Power Plant Operators,-0.3482779
+3132,51-1011,partial,First-Line Supervisors/Managers of Production and Operating Workers,-0.0845282
+3132,51-8031,partial,Water and Liquid Waste Treatment Plant and System Operators,-0.44501
+3132,51-8099,partial,"Plant and System Operators, All Other",-0.6702387
+3132,53-7072,partial,"Pump Operators, Except Wellhead Pumpers",-0.8422927
+3133,51-8091,full,Chemical Plant and System Operators,-0.3831282
+3134,51-8092,partial,Gas Plant Operators,-0.2982082
+3134,51-8093,partial,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",-0.370036
+3134,53-7071,partial,Gas Compressor and Gas Pumping Station Operators,-0.6909992
+3134,53-7072,partial,"Pump Operators, Except Wellhead Pumpers",-0.8422927
+3135,51-4051,full,Metal-Refining Furnace Operators and Tenders,-1.167465
+3139,51-4012,full,Numerical Tool and Process Control Programmers,-0.0241824
+3141,19-4021,partial,Biological Technicians,0.3012355
+3141,19-4091,partial,"Environmental Science and Protection Technicians, Including Health",0.0169452
+3142,19-4011,full,Agricultural and Food Science Technicians,0.095719
+3143,19-4093,full,Forest and Conservation Technicians,-0.6672396
+3151,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+3151,53-5031,partial,Ship Engineers,-0.5264951
+3152,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+3152,53-5021,partial,"Captains, Mates, and Pilots of Water Vessels",-0.4281868
+3153,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+3153,53-2011,partial,"Airline Pilots, Copilots, and Flight Engineers",-0.2070626
+3153,53-2012,partial,Commercial Pilots,-0.1817332
+3154,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+3154,53-2021,partial,Air Traffic Controllers,1.152798
+3155,17-3023,full,Electrical and Electronic Engineering Technicians,0.3515252
+3211,29-1124,partial,Radiation Therapists,-0.2189393
+3211,29-2032,partial,Diagnostic Medical Sonographers,-0.264054
+3211,29-2033,partial,Nuclear Medicine Technologists,0.0855276
+3211,29-2034,partial,Radiologic Technologists and Technicians,-0.5559037
+3211,29-2035,partial,Magnetic Resonance Imaging Technologists,-0.0727627
+3212,29-2011,partial,Medical and Clinical Laboratory Technologists,0.2818067
+3212,29-2012,partial,Medical and Clinical Laboratory Technicians,-0.1273315
+3213,29-2052,full,Pharmacy Technicians,0.0070256
+3214,29-2091,partial,Orthotists and Prosthetists,0.066577
+3214,29-2092,partial,Hearing Aid Specialists,0.5648953
+3214,51-9081,partial,Dental Laboratory Technicians,0.0013206
+3214,51-9082,partial,Medical Appliance Technicians,-0.4949538
+3221,29-2061,full,Licensed Practical and Licensed Vocational Nurses,-0.5137373
+3222,29-9099,full,"Healthcare Practitioners and Technical Workers, All Other",0.2295568
+3230,29-9099,full,"Healthcare Practitioners and Technical Workers, All Other",0.2295568
+3240,29-2056,partial,Veterinary Technologists and Technicians,-0.3623179
+3240,31-9096,partial,Veterinary Assistants and Laboratory Animal Caretakers,-0.7735824
+3251,29-2021,partial,Dental Hygienists,-0.416508
+3251,31-9091,partial,Dental Assistants,-0.5268759
+3252,29-2071,full,Medical Records and Health Information Technicians,0.5738765
+3253,21-1094,full,Community Health Workers,0.0371229
+3254,29-2081,full,"Opticians, Dispensing",0.1013966
+3255,29-1199,partial,"Health Diagnosing and Treating Practitioners, All Other",0.7109566
+3255,31-2021,partial,Physical Therapist Assistants,-0.5308535
+3255,31-9011,partial,Massage Therapists,-1.410233
+3256,29-2057,partial,Ophthalmic Medical Technicians,0.078734
+3256,31-9092,partial,Medical Assistants,0.1497917
+3257,29-9012,partial,Occupational Health and Safety Technicians,0.3996866
+3257,45-2011,partial,Agricultural Inspectors,0.1704867
+3257,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+3257,53-6051,partial,Transportation Inspectors,-0.18376
+3258,29-2041,full,Emergency Medical Technicians and Paramedics,-0.6863446
+3259,29-1126,partial,Respiratory Therapists,-0.1880507
+3259,29-2031,partial,Cardiovascular Technologists and Technicians,-0.0909526
+3259,29-2051,partial,Dietetic Technicians,-0.1260282
+3259,29-2053,partial,Psychiatric Technicians,-0.2203484
+3259,29-2054,partial,Respiratory Therapy Technicians,-0.1060473
+3259,29-2055,partial,Surgical Technologists,-0.4830476
+3259,29-2099,partial,"Health Technologists and Technicians, All Other",-0.283854
+3259,29-9099,partial,"Healthcare Practitioners and Technical Workers, All Other",0.2295568
+3259,31-2011,partial,Occupational Therapist Assistants,-0.3153762
+3259,31-9099,partial,"Healthcare Support Workers, All Other",0.1660077
+3311,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3311,41-3031,partial,"Securities, Commodities, and Financial Services Sales Agents",1.256298
+3312,13-2071,partial,Loan Counselors,1.385381
+3312,13-2072,partial,Loan Officers,1.385739
+3313,43-3031,full,"Bookkeeping, Accounting, and Auditing Clerks",1.039749
+3314,15-2091,partial,Mathematical Technicians,0.7559803
+3314,19-4061,partial,Social Science Research Assistants,1.204652
+3314,43-9111,partial,Statistical Assistants,1.389965
+3315,13-1031,partial,"Claims Adjusters, Examiners, and Investigators",1.274024
+3315,13-1032,partial,"Insurance Appraisers, Auto Damage",0.6634955
+3315,13-2021,partial,Appraisers and Assessors of Real Estate,0.8413203
+3321,13-2053,partial,Insurance Underwriters,1.326652
+3321,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3321,41-3021,partial,Insurance Sales Agents,1.341258
+3322,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3322,41-3099,partial,"Sales Representatives, Services, All Other",1.302674
+3322,41-4011,partial,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",0.8911985
+3322,41-4012,partial,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",0.8224681
+3323,13-1021,partial,"Purchasing Agents and Buyers, Farm Products",0.7687054
+3323,13-1022,partial,"Wholesale and Retail Buyers, Except Farm Products",0.8188258
+3323,13-1023,partial,"Purchasing Agents, Except Wholesale, Retail, and Farm Products",1.509181
+3324,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3324,41-3031,partial,"Securities, Commodities, and Financial Services Sales Agents",1.256298
+3324,43-5011,partial,Cargo and Freight Agents,1.405415
+3331,43-5011,partial,Cargo and Freight Agents,1.405415
+3331,43-5071,partial,"Shipping, Receiving, and Traffic Clerks",-0.7463213
+3332,13-1121,full,Meeting and Convention Planners,0.3740207
+3333,13-1071,partial,"Employment, Recruitment, and Placement Specialists",1.36005
+3333,13-1074,partial,Farm Labor Contractors,-0.4354025
+3334,11-9141,partial,"Property, Real Estate, and Community Association Managers",1.215396
+3334,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3334,41-9021,partial,Real Estate Brokers,1.149681
+3334,41-9022,partial,Real Estate Sales Agents,0.8649445
+3339,13-1011,partial,"Agents and Business Managers of Artists, Performers, and Athletes",1.068559
+3339,13-1051,partial,Cost Estimators,1.367669
+3339,13-1199,partial,"Business Operations Specialists, All Other",1.047687
+3339,13-2099,partial,"Financial Specialists, All Other",1.361362
+3339,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+3339,41-3011,partial,Advertising Sales Agents,1.162588
+3339,41-3041,partial,Travel Agents,1.133598
+3341,43-1011,full,First-Line Supervisors/Managers of Office and Administrative Support Workers,1.038688
+3342,43-6012,full,Legal Secretaries,1.014541
+3343,23-2091,partial,Court Reporters,0.835246
+3343,43-6011,partial,Executive Secretaries and Administrative Assistants,1.079643
+3344,31-9094,partial,Medical Transcriptionists,1.06259
+3344,43-6013,partial,Medical Secretaries,1.217982
+3351,13-1041,partial,"Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation",0.6981205
+3351,33-1012,partial,First-Line Supervisors/Managers of Police and Detectives,-0.1923298
+3351,33-3051,partial,Police and Sheriff's Patrol Officers,-0.6681123
+3352,13-2081,full,"Tax Examiners, Collectors, and Revenue Agents",1.36682
+3353,13-1041,partial,"Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation",0.6981205
+3353,43-4061,partial,"Eligibility Interviewers, Government Programs",1.226286
+3354,13-1041,partial,"Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation",0.6981205
+3354,43-4031,partial,"Court, Municipal, and License Clerks",1.166267
+3355,33-1012,partial,First-Line Supervisors/Managers of Police and Detectives,-0.1923298
+3355,33-3021,partial,Detectives and Criminal Investigators,0.2257696
+3359,45-2011,full,Agricultural Inspectors,0.1704867
+3411,23-1012,partial,Judicial Law Clerks,1.462973
+3411,23-2011,partial,Paralegals and Legal Assistants,1.292055
+3411,23-2093,partial,"Title Examiners, Abstractors, and Searchers",1.279954
+3411,33-3011,partial,Bailiffs,-0.5103183
+3411,33-9021,partial,Private Detectives and Investigators,0.7483108
+3411,33-9031,partial,Gaming Surveillance Officers and Gaming Investigators,0.7283933
+3412,21-1093,full,Social and Human Service Assistants,0.4652255
+3421,27-2021,full,Athletes and Sports Competitors,-1.814336
+3422,25-3021,partial,Self-Enrichment Education Teachers,0.526352
+3422,27-2022,partial,Coaches and Scouts,0.1168668
+3422,27-2023,partial,"Umpires, Referees, and Other Sports Officials",-0.0325617
+3423,25-3021,partial,Self-Enrichment Education Teachers,0.526352
+3423,29-9091,partial,Athletic Trainers,-0.3311363
+3423,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+3423,39-9031,partial,Fitness Trainers and Aerobics Instructors,-2.111948
+3431,27-4021,full,Photographers,-0.1680973
+3432,27-1025,partial,Interior Designers,1.12168
+3432,27-1026,partial,Merchandise Displayers and Window Trimmers,-1.001413
+3432,27-1027,partial,Set and Exhibit Designers,-0.0519323
+3433,25-4013,partial,Museum Technicians and Conservators,-0.0912107
+3433,25-4031,partial,Library Technicians,0.037965
+3433,27-1012,partial,Craft Artists,-0.9295284
+3434,35-1011,partial,Chefs and Head Cooks,-0.2676433
+3434,35-1012,partial,First-Line Supervisors/Managers of Food Preparation and Serving Workers,-0.2575492
+3435,39-3092,partial,Costume Attendants,-0.4533608
+3511,43-9011,full,Computer Operators,0.7040519
+3512,15-1151,full,Computer User Support Specialists,0.299343
+3513,15-1152,full,Computer Network Support Specialists,0.7860606
+3514,15-1134,partial,Web Developers,1.089463
+3514,15-1142,partial,Network and Computer Systems Administrators,0.7895315
+3521,27-4011,partial,Audio and Video Equipment Technicians,-0.0117747
+3521,27-4012,partial,Broadcast Technicians,0.1222249
+3521,27-4013,partial,Radio Operators,0.926126
+3521,27-4014,partial,Sound Engineering Technicians,0.4715462
+3521,27-4031,partial,"Camera Operators, Television, Video, and Motion Picture",-0.4470009
+3522,17-3023,full,Electrical and Electronic Engineering Technicians,0.3515252
+4110,43-3061,partial,Procurement Clerks,1.487838
+4110,43-9061,partial,"Office Clerks, General",0.9888986
+4120,43-6014,full,"Secretaries, Except Legal, Medical, and Executive",1.099056
+4131,43-9022,full,Word Processors and Typists,0.6219606
+4132,43-9021,full,Data Entry Keyers,0.3108081
+4211,43-3071,partial,Tellers,0.4727723
+4211,43-5051,partial,Postal Service Clerks,-0.5186997
+4212,39-1011,partial,Gaming Supervisors,1.128203
+4212,39-1012,partial,Slot Key Persons,-0.1370162
+4212,39-3011,partial,Gaming Dealers,0.0605832
+4212,39-3012,partial,Gaming and Sports Book Writers and Runners,0.4652752
+4212,43-3041,partial,Gaming Cage Workers,0.4026518
+4214,13-1131,partial,Fundraisers,1.242567
+4214,43-3011,partial,Bill and Account Collectors,1.271991
+4221,41-1012,partial,First-Line Supervisors/Managers of Non-Retail Sales Workers,1.316195
+4221,41-3041,partial,Travel Agents,1.133598
+4221,43-4181,partial,Reservation and Transportation Ticket Agents and Travel Clerks,0.227312
+4222,43-4051,partial,Customer Service Representatives,0.9562519
+4222,43-4171,partial,Receptionists and Information Clerks,1.013186
+4223,43-2011,partial,"Switchboard Operators, Including Answering Service",0.9832644
+4223,43-2021,partial,Telephone Operators,1.019712
+4224,39-6012,partial,Concierges,0.855832
+4224,43-4081,partial,"Hotel, Motel, and Resort Desk Clerks",0.6063127
+4225,43-4021,partial,Correspondence Clerks,1.149758
+4225,43-4171,partial,Receptionists and Information Clerks,1.013186
+4226,43-4171,full,Receptionists and Information Clerks,1.013186
+4227,43-4111,full,"Interviewers, Except Eligibility and Loan",1.297031
+4229,43-4061,partial,"Eligibility Interviewers, Government Programs",1.226286
+4311,43-3021,partial,Billing and Posting Clerks and Machine Operators,1.333455
+4311,43-3031,partial,"Bookkeeping, Accounting, and Auditing Clerks",1.039749
+4312,43-4011,partial,Brokerage Clerks,1.144877
+4312,43-4041,partial,"Credit Authorizers, Checkers, and Clerks",1.440296
+4312,43-4131,partial,Loan Interviewers and Clerks,1.364395
+4312,43-4141,partial,New Accounts Clerks,1.174998
+4312,43-9041,partial,Insurance Claims and Policy Processing Clerks,1.240201
+4313,43-3051,full,Payroll and Timekeeping Clerks,1.257632
+4321,43-5071,partial,"Shipping, Receiving, and Traffic Clerks",-0.7463213
+4321,43-5081,partial,Stock Clerks and Order Fillers,-0.7892948
+4321,43-5111,partial,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",-0.1860789
+4322,43-5061,full,"Production, Planning, and Expediting Clerks",0.6999103
+4323,43-5032,full,"Dispatchers, Except Police, Fire, and Ambulance",1.234523
+4411,25-4031,partial,Library Technicians,0.037965
+4411,43-4121,partial,"Library Assistants, Clerical",0.2038919
+4412,43-5021,partial,Couriers and Messengers,-0.9591126
+4412,43-5051,partial,Postal Service Clerks,-0.5186997
+4412,43-5052,partial,Postal Service Mail Carriers,-1.064715
+4412,43-5053,partial,"Postal Service Mail Sorters, Processors, and Processing Machine Operators",-1.185001
+4412,43-9051,partial,"Mail Clerks and Mail Machine Operators, Except Postal Service",-0.8184676
+4413,43-9081,full,Proofreaders and Copy Markers,1.288375
+4414,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+4414,39-9021,partial,Personal and Home Care Aides,-0.5737774
+4415,43-4071,partial,File Clerks,0.2839743
+4415,43-9071,partial,"Office Machine Operators, Except Computer",-0.5171404
+4416,43-4161,full,"Human Resources Assistants, Except Payroll and Timekeeping",1.353098
+4419,43-4021,partial,Correspondence Clerks,1.149758
+4419,43-4151,partial,Order Clerks,0.8388861
+5111,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+5111,53-2031,partial,Flight Attendants,-0.7621183
+5111,53-6061,partial,"Transportation Attendants, Except Flight Attendants",-0.3752249
+5112,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+5112,53-6061,partial,"Transportation Attendants, Except Flight Attendants",-0.3752249
+5113,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5113,39-7011,partial,Tour Guides and Escorts,0.357096
+5113,39-7012,partial,Travel Guides,0.6083829
+5120,35-1012,partial,First-Line Supervisors/Managers of Food Preparation and Serving Workers,-0.2575492
+5120,35-2012,partial,"Cooks, Institution and Cafeteria",-0.6360813
+5120,35-2013,partial,"Cooks, Private Household",-0.7867444
+5120,35-2014,partial,"Cooks, Restaurant",-0.7418264
+5120,35-2015,partial,"Cooks, Short Order",-0.5933817
+5131,35-3031,partial,Waiters and Waitresses,-0.9481003
+5131,35-3041,partial,"Food Servers, Nonrestaurant",-0.7270206
+5132,35-3011,full,Bartenders,-0.6159883
+5141,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5141,39-5011,partial,Barbers,-0.7294621
+5141,39-5012,partial,"Hairdressers, Hairstylists, and Cosmetologists",-0.6824517
+5142,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5142,39-5012,partial,"Hairdressers, Hairstylists, and Cosmetologists",-0.6824517
+5142,39-5091,partial,"Makeup Artists, Theatrical and Performance",-0.4596138
+5142,39-5092,partial,Manicurists and Pedicurists,0.0335124
+5142,39-5093,partial,Shampooers,-0.905371
+5142,39-5094,partial,Skin Care Specialists,-0.2628396
+5151,37-1011,full,First-Line Supervisors/Managers of Housekeeping and Janitorial Workers,-0.5854128
+5152,37-1011,partial,First-Line Supervisors/Managers of Housekeeping and Janitorial Workers,-0.5854128
+5153,37-2011,full,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",-1.436201
+5162,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5162,39-9021,partial,Personal and Home Care Aides,-0.5737774
+5163,39-4011,partial,Embalmers,-0.7311451
+5163,39-4021,partial,Funeral Attendants,-0.5445412
+5163,39-4031,partial,"Morticians, Undertakers, and Funeral Directors",-0.1903759
+5164,31-9096,partial,Veterinary Assistants and Laboratory Animal Caretakers,-0.7735824
+5164,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5164,39-2011,partial,Animal Trainers,-0.9167759
+5164,39-2021,partial,Nonfarm Animal Caretakers,-0.8890408
+5165,25-3021,full,Self-Enrichment Education Teachers,0.526352
+5169,35-9031,partial,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",-0.0565477
+5169,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5169,39-9032,partial,Recreation Workers,-0.2441154
+5169,39-9041,partial,Residential Advisors,0.4746119
+5211,41-9091,full,"Door-To-Door Sales Workers, News and Street Vendors, and Related Workers",1.107101
+5212,35-3041,partial,"Food Servers, Nonrestaurant",-0.7270206
+5212,41-9091,partial,"Door-To-Door Sales Workers, News and Street Vendors, and Related Workers",1.107101
+5221,11-1021,full,General and Operations Managers,0.5748773
+5222,41-1011,full,First-Line Supervisors/Managers of Retail Sales Workers,0.0191826
+5223,41-2022,partial,Parts Salespersons,-0.1184909
+5223,41-2031,partial,Retail Salespersons,0.0873069
+5230,41-2011,partial,Cashiers,-0.2480887
+5230,41-2012,partial,Gaming Change Persons and Booth Cashiers,-0.0500926
+5241,41-9012,full,Models,-1.122021
+5242,41-9011,full,Demonstrators and Product Promoters,0.1235652
+5243,41-9091,full,"Door-To-Door Sales Workers, News and Street Vendors, and Related Workers",1.107101
+5244,41-9041,full,Telemarketers,1.118129
+5245,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+5245,53-6031,partial,Service Station Attendants,-1.221489
+5246,35-3021,partial,"Combined Food Preparation and Serving Workers, Including Fast Food",-0.5305266
+5246,35-3022,partial,"Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",-0.4850956
+5246,35-9011,partial,Dining Room and Cafeteria Attendants and Bartender Helpers,-1.927078
+5249,41-2021,partial,Counter and Rental Clerks,0.0784367
+5311,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5311,39-9011,partial,Child Care Workers,-0.3834794
+5312,25-9041,full,Teacher Assistants,0.4516636
+5321,31-1013,partial,Psychiatric Aides,-0.496565
+5321,31-1014,partial,Nursing Assistants,-0.9040212
+5322,31-1011,partial,Home Health Aides,-0.644942
+5322,39-1021,partial,First-Line Supervisors/Managers of Personal Service Workers,0.4303075
+5322,39-9021,partial,Personal and Home Care Aides,-0.5737774
+5329,31-1015,partial,Orderlies,-1.679232
+5329,31-2012,partial,Occupational Therapist Aides,-0.7734322
+5329,31-2022,partial,Physical Therapist Aides,-0.8823265
+5329,31-9091,partial,Dental Assistants,-0.5268759
+5329,31-9093,partial,Medical Equipment Preparers,-0.7308648
+5329,31-9095,partial,Pharmacy Aides,-0.1552654
+5329,31-9097,partial,Phlebotomists,-0.2778475
+5329,31-9099,partial,"Healthcare Support Workers, All Other",0.1660077
+5411,33-1021,partial,First-Line Supervisors/Managers of Fire Fighting and Prevention Workers,-0.593021
+5411,33-2011,partial,Fire Fighters,-1.320232
+5412,33-1012,partial,First-Line Supervisors/Managers of Police and Detectives,-0.1923298
+5412,33-3051,partial,Police and Sheriff's Patrol Officers,-0.6681123
+5412,33-3052,partial,Transit and Railroad Police,-0.8205515
+5413,33-1011,partial,First-Line Supervisors/Managers of Correctional Officers,-0.5584278
+5413,33-3012,partial,Correctional Officers and Jailers,-0.8875365
+5414,33-9031,partial,Gaming Surveillance Officers and Gaming Investigators,0.7283933
+5414,33-9032,partial,Security Guards,-0.3908421
+5414,33-9093,partial,Transportation Security Screeners,-0.5068558
+5419,33-3031,partial,Fish and Game Wardens,-0.4585168
+5419,33-3041,partial,Parking Enforcement Workers,-0.6239931
+5419,33-9011,partial,Animal Control Workers,-0.5946321
+5419,33-9091,partial,Crossing Guards,-0.5699511
+5419,33-9092,partial,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",-0.4718385
+5419,33-9099,partial,"Protective Service Workers, All Other",0.0764088
+5419,43-5031,partial,"Police, Fire, and Ambulance Dispatchers",0.9074452
+6111,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6111,45-2091,partial,Agricultural Equipment Operators,-1.145156
+6112,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6112,45-2091,partial,Agricultural Equipment Operators,-1.145156
+6113,37-1012,partial,"First-Line Supervisors/Managers of Landscaping, Lawn Service, and Groundskeeping Workers",-0.5548871
+6113,37-3013,partial,Tree Trimmers and Pruners,-1.727035
+6113,45-2091,partial,Agricultural Equipment Operators,-1.145156
+6114,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6114,45-2091,partial,Agricultural Equipment Operators,-1.145156
+6121,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6121,45-2021,partial,Animal Breeders,-1.044292
+6122,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6122,45-2021,partial,Animal Breeders,-1.044292
+6123,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6123,45-2021,partial,Animal Breeders,-1.044292
+6129,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6129,45-2021,partial,Animal Breeders,-1.044292
+6130,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6130,45-2021,partial,Animal Breeders,-1.044292
+6130,45-2091,partial,Agricultural Equipment Operators,-1.145156
+6210,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6210,45-4011,partial,Forest and Conservation Workers,-1.064205
+6210,45-4021,partial,Fallers,-1.795407
+6210,45-4022,partial,Logging Equipment Operators,-1.003702
+6210,45-4023,partial,Log Graders and Scalers,-0.4768305
+6221,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6221,45-2021,partial,Animal Breeders,-1.044292
+6222,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6222,45-3011,partial,Fishers and Related Fishing Workers,-1.513249
+6223,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6223,45-3011,partial,Fishers and Related Fishing Workers,-1.513249
+6224,45-1011,partial,"First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",-0.4791843
+6224,45-3021,partial,Hunters and Trappers,-1.304797
+6310,45-2092,full,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",-1.601349
+6320,45-2093,full,"Farmworkers, Farm and Ranch Animals",-1.108432
+6330,45-2092,partial,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",-1.601349
+6330,45-2093,partial,"Farmworkers, Farm and Ranch Animals",-1.108432
+6340,45-3011,partial,Fishers and Related Fishing Workers,-1.513249
+6340,45-3021,partial,Hunters and Trappers,-1.304797
+7111,11-9021,full,Construction Managers,1.029139
+7112,47-2021,partial,Brickmasons and Blockmasons,-1.75434
+7112,49-9045,partial,"Refractory Materials Repairers, Except Brickmasons",-1.237463
+7113,47-2022,partial,Stonemasons,-1.714759
+7113,47-4091,partial,Segmental Pavers,-0.9827304
+7114,47-2051,partial,Cement Masons and Concrete Finishers,-1.777407
+7114,47-2053,partial,Terrazzo Workers and Finishers,-1.776065
+7114,47-4091,partial,Segmental Pavers,-0.9827304
+7115,47-2031,full,Carpenters,-1.323631
+7119,47-2231,partial,Solar Photovoltaic Installers,-0.9441692
+7119,47-4031,partial,Fence Erectors,-1.902113
+7119,47-4041,partial,Hazardous Materials Removal Workers,-0.6887439
+7119,47-4099,partial,"Construction and Related Workers, All Other",-0.8728439
+7119,49-9095,partial,Manufactured Building and Mobile Home Installers,-1.414062
+7121,47-2181,full,Roofers,-1.752941
+7122,47-2041,partial,Carpet Installers,-1.564577
+7122,47-2042,partial,"Floor Layers, Except Carpet, Wood, and Hard Tiles",-1.301024
+7122,47-2043,partial,Floor Sanders and Finishers,-1.748722
+7122,47-2044,partial,Tile and Marble Setters,-1.22543
+7123,47-2081,partial,Drywall and Ceiling Tile Installers,-1.647971
+7123,47-2082,partial,Tapers,-1.540774
+7123,47-2161,partial,Plasterers and Stucco Masons,-1.755588
+7124,47-2131,partial,"Insulation Workers, Floor, Ceiling, and Wall",-1.618772
+7124,47-2132,partial,"Insulation Workers, Mechanical",-1.268615
+7125,47-2121,full,Glaziers,-1.388901
+7126,47-2151,partial,Pipelayers,-1.225611
+7126,47-2152,partial,"Plumbers, Pipefitters, and Steamfitters",-1.121219
+7127,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7127,49-9021,partial,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",-0.8491117
+7131,47-2141,partial,"Painters, Construction and Maintenance",-1.58799
+7131,47-2142,partial,Paperhangers,-1.72753
+7132,51-9121,partial,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",-1.121331
+7132,51-9122,partial,"Painters, Transportation Equipment",-1.447553
+7211,51-4071,partial,Foundry Mold and Coremakers,-1.740349
+7211,51-4072,partial,"Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",-1.146139
+7212,51-4121,partial,"Welders, Cutters, Solderers, and Brazers",-1.197596
+7212,51-4122,partial,"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",-1.002411
+7213,47-2011,partial,Boilermakers,-1.097532
+7213,47-2211,partial,Sheet Metal Workers,-1.174972
+7213,51-4192,partial,"Lay-Out Workers, Metal and Plastic",-0.7221353
+7214,47-2171,partial,Reinforcing Iron and Rebar Workers,-1.970997
+7214,47-2221,partial,Structural Iron and Steel Workers,-1.780065
+7214,51-2041,partial,Structural Metal Fabricators and Fitters,-1.076307
+7215,49-9096,full,Riggers,-1.221519
+7221,51-4022,partial,"Forging Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8046677
+7222,49-9094,partial,Locksmiths and Safe Repairers,-0.8657498
+7222,51-4012,partial,Numerical Tool and Process Control Programmers,-0.0241824
+7222,51-4061,partial,"Model Makers, Metal and Plastic",-0.7421977
+7222,51-4062,partial,"Patternmakers, Metal and Plastic",-0.6131331
+7222,51-4111,partial,Tool and Die Makers,-0.5317897
+7222,51-4192,partial,"Lay-Out Workers, Metal and Plastic",-0.7221353
+7223,51-4011,partial,"Computer-Controlled Machine Tool Operators, Metal and Plastic",-0.6737444
+7223,51-4021,partial,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",-1.234352
+7223,51-4022,partial,"Forging Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8046677
+7223,51-4023,partial,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",-1.08921
+7223,51-4031,partial,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",-1.036569
+7223,51-4032,partial,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-0.7598132
+7223,51-4033,partial,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-0.9901662
+7223,51-4034,partial,"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-1.06734
+7223,51-4035,partial,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8703219
+7223,51-4041,partial,Machinists,-0.8675535
+7223,51-4081,partial,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-0.74266
+7224,51-4194,partial,"Tool Grinders, Filers, and Sharpeners",-0.8809238
+7224,51-9022,partial,"Grinding and Polishing Workers, Hand",-1.146524
+7231,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7231,49-3021,partial,Automotive Body and Related Repairers,-1.180589
+7231,49-3022,partial,Automotive Glass Installers and Repairers,-1.202285
+7231,49-3023,partial,Automotive Service Technicians and Mechanics,-0.9547055
+7231,49-3031,partial,Bus and Truck Mechanics and Diesel Engine Specialists,-1.010472
+7231,49-3051,partial,Motorboat Mechanics,-0.8863602
+7231,49-3052,partial,Motorcycle Mechanics,-0.763721
+7231,49-3053,partial,Outdoor Power Equipment and Other Small Engine Mechanics,-0.8941408
+7231,49-3092,partial,Recreational Vehicle Service Technicians,-0.9244052
+7231,49-3093,partial,Tire Repairers and Changers,-1.550724
+7232,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7232,49-3011,partial,Aircraft Mechanics and Service Technicians,-0.6551197
+7233,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7233,49-3041,partial,Farm Equipment Mechanics,-1.20703
+7233,49-3042,partial,"Mobile Heavy Equipment Mechanics, Except Engines",-1.169815
+7233,49-3043,partial,Rail Car Repairers,-1.448102
+7233,49-9041,partial,Industrial Machinery Mechanics,-1.133177
+7233,49-9043,partial,"Maintenance Workers, Machinery",-0.9735492
+7233,49-9044,partial,Millwrights,-1.266085
+7233,49-9045,partial,"Refractory Materials Repairers, Except Brickmasons",-1.237463
+7233,49-9081,partial,Wind Turbine Service Technicians,-0.9709935
+7234,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7234,49-3091,partial,Bicycle Repairers,-0.9226068
+7311,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7311,49-9061,partial,Camera and Photographic Equipment Repairers,0.0546422
+7311,49-9062,partial,Medical Equipment Repairers,-0.2768838
+7311,49-9064,partial,Watch Repairers,-0.2123996
+7312,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7312,49-9063,partial,Musical Instrument Repairers and Tuners,-0.5306271
+7313,51-9071,full,Jewelers and Precious Stone and Metal Workers,-0.1560197
+7314,27-1012,partial,Craft Artists,-0.9295284
+7314,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+7315,51-9022,partial,"Grinding and Polishing Workers, Hand",-1.146524
+7315,51-9031,partial,"Cutters and Trimmers, Hand",-0.9479839
+7315,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+7316,51-9123,partial,"Painting, Coating, and Decorating Workers",-0.9705587
+7316,51-9194,partial,Etchers and Engravers,-0.6395226
+7317,27-1012,partial,Craft Artists,-0.9295284
+7318,51-6041,full,Shoe and Leather Workers and Repairers,-0.990912
+7319,27-1012,full,Craft Artists,-0.9295284
+7321,43-9031,partial,Desktop Publishers,0.3437743
+7321,51-5111,partial,Prepress Technicians and Workers,0.4107973
+7322,51-5112,full,Printing Press Operators,-0.7093881
+7323,51-5113,full,Print Binding and Finishing Workers,-0.9062089
+7411,47-2111,partial,Electricians,-0.7796905
+7411,47-2231,partial,Solar Photovoltaic Installers,-0.9441692
+7412,47-4021,partial,Elevator Installers and Repairers,-0.8604742
+7412,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7412,49-2092,partial,"Electric Motor, Power Tool, and Related Repairers",-0.8106341
+7412,49-2093,partial,"Electrical and Electronics Installers and Repairers, Transportation Equipment",-0.8303875
+7412,49-2094,partial,"Electrical and Electronics Repairers, Commercial and Industrial Equipment",-0.4632031
+7412,49-2095,partial,"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",-0.5522636
+7412,49-2096,partial,"Electronic Equipment Installers and Repairers, Motor Vehicles",-0.7915968
+7412,49-2098,partial,Security and Fire Alarm Systems Installers,-0.6926484
+7412,49-3053,partial,Outdoor Power Equipment and Other Small Engine Mechanics,-0.8941408
+7412,49-9011,partial,Mechanical Door Repairers,-1.383152
+7412,49-9012,partial,"Control and Valve Installers and Repairers, Except Mechanical Door",-0.7606913
+7412,49-9031,partial,Home Appliance Repairers,-0.9703799
+7412,49-9097,partial,Signal and Track Switch Repairers,-0.858221
+7413,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7413,49-9051,partial,Electrical Power-Line Installers and Repairers,-1.081398
+7421,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7421,49-2011,partial,"Computer, Automated Teller, and Office Machine Repairers",-0.3458247
+7421,49-2091,partial,Avionics Technicians,-0.1728535
+7421,49-2093,partial,"Electrical and Electronics Installers and Repairers, Transportation Equipment",-0.8303875
+7421,49-2094,partial,"Electrical and Electronics Repairers, Commercial and Industrial Equipment",-0.4632031
+7421,49-2095,partial,"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",-0.5522636
+7421,49-2096,partial,"Electronic Equipment Installers and Repairers, Motor Vehicles",-0.7915968
+7422,49-1011,partial,"First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",-0.0205169
+7422,49-2011,partial,"Computer, Automated Teller, and Office Machine Repairers",-0.3458247
+7422,49-2021,partial,Radio Mechanics,-0.6335382
+7422,49-2022,partial,"Telecommunications Equipment Installers and Repairers, Except Line Installers",-0.853048
+7422,49-2093,partial,"Electrical and Electronics Installers and Repairers, Transportation Equipment",-0.8303875
+7422,49-9052,partial,Telecommunications Line Installers and Repairers,-1.083883
+7422,49-2097,partial,Electronic Home Entertainment Equipment Installers and Repairers,-0.571284
+7511,51-3021,partial,Butchers and Meat Cutters,-0.9709924
+7511,51-3022,partial,"Meat, Poultry, and Fish Cutters and Trimmers",-1.10563
+7511,51-3023,partial,Slaughterers and Meat Packers,-1.834668
+7511,51-3091,partial,"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",-0.758859
+7512,51-3011,full,Bakers,-0.3852989
+7513,51-3092,partial,Food Batchmakers,-0.3791114
+7513,51-9012,partial,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",-0.9379141
+7514,51-3093,partial,Food Cooking Machine Operators and Tenders,-0.5559894
+7515,45-2011,partial,Agricultural Inspectors,0.1704867
+7515,45-2041,partial,"Graders and Sorters, Agricultural Products",-1.370968
+7516,45-2041,partial,"Graders and Sorters, Agricultural Products",-1.370968
+7516,51-9041,partial,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",-1.042151
+7516,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+7521,51-9051,partial,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",-0.9582346
+7521,51-9191,partial,Cementing and Gluing Machine Operators and Tenders,-1.311418
+7522,51-7011,partial,Cabinetmakers and Bench Carpenters,-1.327489
+7522,51-7021,partial,Furniture Finishers,-1.197727
+7522,51-7031,partial,"Model Makers, Wood",-0.7278869
+7522,51-7032,partial,"Patternmakers, Wood",-1.057897
+7523,51-7042,full,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing",-1.130357
+7531,51-6052,full,"Tailors, Dressmakers, and Custom Sewers",-0.4305268
+7532,51-6062,partial,"Textile Cutting Machine Setters, Operators, and Tenders",-1.022949
+7532,51-6092,partial,Fabric and Apparel Patternmakers,-0.0831096
+7532,51-9031,partial,"Cutters and Trimmers, Hand",-0.9479839
+7533,49-9093,partial,"Fabric Menders, Except Garment",-1.372839
+7533,51-6041,partial,Shoe and Leather Workers and Repairers,-0.990912
+7533,51-6051,partial,"Sewers, Hand",-0.5987218
+7534,51-6093,full,Upholsterers,-1.313735
+7535,45-2041,partial,"Graders and Sorters, Agricultural Products",-1.370968
+7536,51-6041,full,Shoe and Leather Workers and Repairers,-0.990912
+7541,49-9092,full,Commercial Divers,-1.102728
+7542,47-5031,full,"Explosives Workers, Ordnance Handling Experts, and Blasters",-0.773027
+7543,51-9061,full,"Inspectors, Testers, Sorters, Samplers, and Weighers",-0.0293395
+7544,37-1012,partial,"First-Line Supervisors/Managers of Landscaping, Lawn Service, and Groundskeeping Workers",-0.5548871
+7544,37-2021,partial,Pest Control Workers,-0.7255374
+7544,37-3012,partial,"Pesticide Handlers, Sprayers, and Applicators, Vegetation",-0.8847935
+7549,27-1023,partial,Floral Designers,-0.2718452
+7549,51-9083,partial,Ophthalmic Laboratory Technicians,-0.5966759
+8111,47-5021,partial,"Earth Drillers, Except Oil and Gas",-0.7018391
+8111,47-5041,partial,Continuous Mining Machine Operators,-1.165492
+8111,47-5042,partial,Mine Cutting and Channeling Machine Operators,-1.200425
+8111,47-5051,partial,"Rock Splitters, Quarry",-1.763494
+8111,47-5061,partial,"Roof Bolters, Mining",-1.618518
+8111,53-7032,partial,Excavating and Loading Machine and Dragline Operators,-1.144356
+8111,53-7033,partial,"Loading Machine Operators, Underground Mining",-1.262688
+8112,51-9021,partial,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",-1.043476
+8112,51-9192,partial,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",-1.141885
+8113,47-5011,partial,"Derrick Operators, Oil and Gas",-1.415002
+8113,47-5012,partial,"Rotary Drill Operators, Oil and Gas",-0.7737326
+8113,47-5013,partial,"Service Unit Operators, Oil, Gas, and Mining",-0.971916
+8113,47-5021,partial,"Earth Drillers, Except Oil and Gas",-0.7018391
+8113,47-5071,partial,"Roustabouts, Oil and Gas",-1.518977
+8113,53-7073,partial,Wellhead Pumpers,-1.091197
+8114,51-8099,partial,"Plant and System Operators, All Other",-0.6702387
+8114,51-9021,partial,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",-1.043476
+8114,51-9023,partial,"Mixing and Blending Machine Setters, Operators, and Tenders",-0.819664
+8114,51-9032,partial,"Cutting and Slicing Machine Setters, Operators, and Tenders",-1.079282
+8121,51-4021,partial,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",-1.234352
+8121,51-4023,partial,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",-1.08921
+8121,51-4051,partial,Metal-Refining Furnace Operators and Tenders,-1.167465
+8121,51-4052,partial,"Pourers and Casters, Metal",-1.00914
+8121,51-4191,partial,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",-1.092486
+8122,51-4193,partial,"Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8999876
+8122,51-9121,partial,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",-1.121331
+8122,51-9192,partial,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",-1.141885
+8131,51-9011,partial,Chemical Equipment Operators and Tenders,-0.511521
+8131,51-9012,partial,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",-0.9379141
+8131,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+8132,51-9151,full,Photographic Process Workers and Processing Machine Operators,-0.3615806
+8141,51-9021,partial,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",-1.043476
+8141,51-9041,partial,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",-1.042151
+8141,51-9051,partial,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",-0.9582346
+8141,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+8141,51-9197,partial,Tire Builders,-1.610915
+8142,51-2091,partial,Fiberglass Laminators and Fabricators,-1.216496
+8142,51-4021,partial,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",-1.234352
+8142,51-4022,partial,"Forging Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8046677
+8142,51-4023,partial,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",-1.08921
+8142,51-4031,partial,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",-1.036569
+8142,51-4032,partial,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-0.7598132
+8142,51-4033,partial,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-0.9901662
+8142,51-4034,partial,"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",-1.06734
+8142,51-4035,partial,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8703219
+8142,51-4072,partial,"Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",-1.146139
+8142,51-4191,partial,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",-1.092486
+8142,51-4193,partial,"Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic",-0.8999876
+8143,51-9191,partial,Cementing and Gluing Machine Operators and Tenders,-1.311418
+8143,51-9196,partial,"Paper Goods Machine Setters, Operators, and Tenders",-0.8740445
+8151,51-6064,full,"Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",-1.392929
+8152,51-6063,full,"Textile Knitting and Weaving Machine Setters, Operators, and Tenders",-1.241662
+8153,51-6031,full,Sewing Machine Operators,-0.9639661
+8154,51-6061,full,Textile Bleaching and Dyeing Machine Operators and Tenders,-0.8609312
+8156,51-6042,full,Shoe Machine Operators and Tenders,-1.029855
+8157,51-6011,full,Laundry and Dry-Cleaning Workers,-1.054399
+8160,51-3091,partial,"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",-0.758859
+8160,51-3092,partial,Food Batchmakers,-0.3791114
+8160,51-3093,partial,Food Cooking Machine Operators and Tenders,-0.5559894
+8160,51-9041,partial,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",-1.042151
+8160,51-9193,partial,Cooling and Freezing Equipment Operators and Tenders,-0.9604952
+8171,51-9192,partial,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",-1.141885
+8171,51-9196,partial,"Paper Goods Machine Setters, Operators, and Tenders",-0.8740445
+8172,51-7041,full,"Sawing Machine Setters, Operators, and Tenders, Wood",-1.165031
+8181,51-6091,partial,"Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",-0.8596925
+8181,51-9021,partial,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",-1.043476
+8181,51-9023,partial,"Mixing and Blending Machine Setters, Operators, and Tenders",-0.819664
+8181,51-9041,partial,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",-1.042151
+8181,51-9051,partial,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",-0.9582346
+8181,51-9195,partial,"Molders, Shapers, and Casters, Except Metal and Plastic",-1.183408
+8182,51-8021,full,Stationary Engineers and Boiler Operators,-0.5032496
+8183,51-9111,full,Packaging and Filling Machine Operators and Tenders,-0.978608
+8189,51-9141,partial,Semiconductor Processors,-0.6372312
+8189,51-9191,partial,Cementing and Gluing Machine Operators and Tenders,-1.311418
+8189,51-9193,partial,Cooling and Freezing Equipment Operators and Tenders,-0.9604952
+8189,53-7011,partial,Conveyor Operators and Tenders,-0.7554432
+8211,51-2011,partial,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",-0.8684706
+8211,51-2031,partial,Engine and Other Machine Assemblers,-0.9561453
+8212,51-2021,partial,"Coil Winders, Tapers, and Finishers",-0.8289722
+8212,51-2022,partial,Electrical and Electronic Equipment Assemblers,-0.6248807
+8212,51-2023,partial,Electromechanical Equipment Assemblers,-0.4977276
+8212,51-2093,partial,"Timing Device Assemblers, Adjusters, and Calibrators",-0.2552991
+8212,51-9194,partial,Etchers and Engravers,-0.6395226
+8219,51-2092,partial,Team Assemblers,-0.8305441
+8311,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8311,53-4011,partial,Locomotive Engineers,-0.4977403
+8311,53-4012,partial,Locomotive Firers,-0.771071
+8311,53-4013,partial,"Rail Yard Engineers, Dinkey Operators, and Hostlers",-0.8320907
+8311,53-4041,partial,Subway and Streetcar Operators,-0.6155429
+8311,53-7111,partial,Shuttle Car Operators,-1.351998
+8312,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8312,53-4021,partial,"Railroad Brake, Signal, and Switch Operators",-1.217647
+8312,53-4031,partial,Railroad Conductors and Yardmasters,-0.4662731
+8321,43-5021,partial,Couriers and Messengers,-0.9591126
+8321,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8322,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8322,53-3011,partial,"Ambulance Drivers and Attendants, Except Emergency Medical Technicians",-0.8298703
+8322,53-3031,partial,Driver/Sales Workers,-0.7293087
+8322,53-3033,partial,"Truck Drivers, Light or Delivery Services",-1.120501
+8322,53-3041,partial,Taxi Drivers and Chauffeurs,-0.6322603
+8331,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8331,53-3021,partial,"Bus Drivers, Transit and Intercity",-0.605453
+8331,53-3022,partial,"Bus Drivers, School",-0.2977046
+8331,53-4041,partial,Subway and Streetcar Operators,-0.6155429
+8332,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8332,53-3032,partial,"Truck Drivers, Heavy and Tractor-Trailer",-1.149057
+8341,45-2091,partial,Agricultural Equipment Operators,-1.145156
+8341,45-4022,partial,Logging Equipment Operators,-1.003702
+8342,47-2071,partial,"Paving, Surfacing, and Tamping Equipment Operators",-1.184739
+8342,47-2072,partial,Pile-Driver Operators,-1.220009
+8342,47-2073,partial,Operating Engineers and Other Construction Equipment Operators,-0.8815078
+8342,53-7031,partial,Dredge Operators,-1.016648
+8342,53-7032,partial,Excavating and Loading Machine and Dragline Operators,-1.144356
+8343,39-3091,partial,Amusement and Recreation Attendants,-0.5246153
+8343,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8343,53-6011,partial,Bridge and Lock Tenders,-0.6322159
+8343,53-7021,partial,Crane and Tower Operators,-1.030619
+8343,53-7041,partial,Hoist and Winch Operators,-0.9781997
+8344,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+8344,53-7051,partial,Industrial Truck and Tractor Operators,-1.39869
+8350,53-5011,partial,Sailors and Marine Oilers,-1.150001
+8350,53-5022,partial,Motorboat Operators,-0.8871186
+9111,37-2012,full,Maids and Housekeeping Cleaners,-1.480657
+9112,37-2011,partial,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",-1.436201
+9112,37-2012,partial,Maids and Housekeeping Cleaners,-1.480657
+9112,53-7061,partial,Cleaners of Vehicles and Equipment,-1.629897
+9121,51-6021,full,"Pressers, Textile, Garment, and Related Materials",-1.950063
+9122,53-7061,full,Cleaners of Vehicles and Equipment,-1.629897
+9123,37-2011,full,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",-1.436201
+9129,47-4071,partial,Septic Tank Servicers and Sewer Pipe Cleaners,-1.210591
+9211,45-2092,partial,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",-1.601349
+9212,45-2093,partial,"Farmworkers, Farm and Ranch Animals",-1.108432
+9213,45-2092,partial,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",-1.601349
+9213,45-2093,partial,"Farmworkers, Farm and Ranch Animals",-1.108432
+9214,37-3011,partial,Landscaping and Groundskeeping Workers,-1.824293
+9214,45-2092,partial,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",-1.601349
+9215,45-4011,partial,Forest and Conservation Workers,-1.064205
+9216,45-2093,partial,"Farmworkers, Farm and Ranch Animals",-1.108432
+9216,45-3011,partial,Fishers and Related Fishing Workers,-1.513249
+9311,47-5081,partial,Helpers--Extraction Workers,-1.543154
+9312,47-4051,partial,Highway Maintenance Workers,-1.27909
+9312,47-4061,partial,Rail-Track Laying and Maintenance Equipment Operators,-1.39906
+9313,47-2061,partial,Construction Laborers,-1.622988
+9313,47-3011,partial,"Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",-1.94229
+9313,47-3012,partial,Helpers--Carpenters,-1.425282
+9313,47-3013,partial,Helpers--Electricians,-1.506896
+9313,47-3014,partial,"Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",-2.04484
+9313,47-3015,partial,"Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",-1.678876
+9313,47-3016,partial,Helpers--Roofers,-1.89822
+9321,53-7064,full,"Packers and Packagers, Hand",-1.51362
+9329,51-9198,partial,Helpers--Production Workers,-1.411304
+9329,51-9199,partial,"Production Workers, All Other",-1.290964
+9329,53-7062,partial,"Laborers and Freight, Stock, and Material Movers, Hand",-1.709183
+9329,53-7063,partial,Machine Feeders and Offbearers,-1.037413
+9331,43-5021,partial,Couriers and Messengers,-0.9591126
+9333,53-1011,partial,Aircraft Cargo Handling Supervisors,-0.7091902
+9333,53-1021,partial,"First-Line Supervisors/Managers of Helpers, Laborers, and Material Movers, Hand",0.1160332
+9333,53-7062,partial,"Laborers and Freight, Stock, and Material Movers, Hand",-1.709183
+9333,53-7121,partial,"Tank Car, Truck, and Ship Loaders",-1.38776
+9334,43-5081,full,Stock Clerks and Order Fillers,-0.7892948
+9411,35-2011,partial,"Cooks, Fast Food",-0.7131837
+9411,35-2015,partial,"Cooks, Short Order",-0.5933817
+9412,35-2021,partial,Food Preparation Workers,-1.226416
+9412,35-9011,partial,Dining Room and Cafeteria Attendants and Bartender Helpers,-1.927078
+9412,35-9021,partial,Dishwashers,-1.738612
+9520,41-9091,full,"Door-To-Door Sales Workers, News and Street Vendors, and Related Workers",1.107101
+9611,53-1031,partial,First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators,0.1466245
+9611,53-7081,partial,Refuse and Recyclable Material Collectors,-1.283373
+9612,53-7081,full,Refuse and Recyclable Material Collectors,-1.283373
+9621,39-6011,partial,Baggage Porters and Bellhops,-1.272015
+9621,43-5021,partial,Couriers and Messengers,-0.9591126
+9622,49-9071,partial,"Maintenance and Repair Workers, General",-1.014408
+9622,49-9098,partial,"Helpers--Installation, Maintenance, and Repair Workers",-1.346555
+9622,49-9099,partial,"Installation, Maintenance, and Repair Workers, All Other",-0.5900791
+9623,43-5041,partial,"Meter Readers, Utilities",-0.9723772
+9623,49-9091,partial,"Coin, Vending, and Amusement Machine Servicers and Repairers",-0.7233995
+9624,53-7062,full,"Laborers and Freight, Stock, and Material Movers, Hand",-1.709183
+9629,39-3021,partial,Motion Picture Projectionists,-0.3786598
+9629,39-3031,partial,"Ushers, Lobby Attendants, and Ticket Takers",-0.2420959
+9629,39-3091,partial,Amusement and Recreation Attendants,-0.5246153
+9629,39-3093,partial,"Locker Room, Coatroom, and Dressing Room Attendants",-0.3454376
+9629,53-6021,partial,Parking Lot Attendants,-0.8353891
