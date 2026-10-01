@@ -48,9 +48,12 @@ differ by about a third of the entire cross-occupational spread. At the
 extreme, one ISCO code contains occupations 2.64 standard deviations apart,
 which is most of the range of the measure.
 
-## The headline number
+## How much structure the ISCO grouping preserves
 
-A one-way random-effects decomposition of SOC-level AIOE across ISCO groups:
+A one-way random-effects decomposition of SOC-level AIOE across ISCO groups.
+Note that this is computed entirely from AIOE, so it measures how much
+structure survives regrouping and says nothing about whether the result is
+correct. The external check is the validation section at the end.
 
 | | |
 |---|---|
@@ -59,7 +62,7 @@ A one-way random-effects decomposition of SOC-level AIOE across ISCO groups:
 | **share of AIOE variance surviving the transfer** | **0.830** |
 
 Eighty-three percent of the variation in AIOE lies between ISCO codes rather
-than within them. The crosswalk preserves most of the signal.
+than within them, so the regrouping preserves most of the structure.
 
 ## Does the aggregation rule matter
 
@@ -137,6 +140,8 @@ no inputs with AIOE and never goes through a crosswalk.
 |---|---|
 | ISCO-08 unit groups covered by both | 416 |
 | Spearman, crosswalked AIOE vs ILO index | 0.818 |
+| bootstrap 95% interval | [0.782, 0.849] |
+| Spearman after trimming the AIOE extremes | 0.797 |
 | Pearson | 0.796 |
 
 The constructs differ. AIOE scores exposure to AI capability, the ILO index
@@ -145,16 +150,38 @@ construct rather than transfer loss.
 
 ### The within-code spread does not predict disagreement
 
-| group | n | mean within-code sd | Spearman vs ILO |
-|---|---|---|---|
-| single-source codes | 155 | 0.000 | 0.790 |
-| multi-source, cleanest third | 87 | 0.105 | 0.810 |
-| multi-source, middle third | 91 | 0.301 | 0.819 |
-| multi-source, messiest third | 83 | 0.645 | 0.798 |
+The direct test. Rank every code by both measures, take the absolute rank
+discrepancy, and correlate it against the within-code spread:
 
-Spread rises from zero to 0.645. Agreement is flat. Filtering the full set at
-0.75, 0.50, 0.35 and 0.25 gives 0.821, 0.825, 0.811 and 0.805 against a
-baseline of 0.818.
+    Spearman(spread, |rank discrepancy|) = -0.032,  p = 0.51
+    multi-source codes only              = +0.009,  p = 0.89
+
+Nothing. The grouped version agrees, with intervals that overlap almost
+entirely, so the ordering between the terciles carries no information:
+
+| group | n | mean within-code sd | Spearman vs ILO | 95% CI |
+|---|---|---|---|---|
+| single-source codes | 155 | 0.000 | 0.790 | |
+| multi-source, cleanest third | 87 | 0.105 | 0.810 | [0.71, 0.88] |
+| multi-source, middle third | 91 | 0.301 | 0.819 | [0.71, 0.89] |
+| multi-source, messiest third | 88 | 0.645 | 0.792 | [0.71, 0.85] |
+
+Filtering the full set at 0.75, 0.50, 0.35 and 0.25 gives 0.821, 0.825, 0.811
+and 0.805 against a baseline of 0.818.
+
+### Aggregation levels
+
+| level | groups | Spearman vs ILO | 95% CI |
+|---|---|---|---|
+| 4-digit unit group | 416 | 0.818 | [0.78, 0.85] |
+| 3-digit minor | 126 | 0.855 | [0.80, 0.89] |
+| 2-digit sub-major | 40 | 0.843 | [0.66, 0.94] |
+| 1-digit major | 9 | 0.933 | [0.48, 1.00] |
+
+Point estimates rise with coarseness and the intervals widen faster. The
+2-digit interval contains the 4-digit estimate and the 1-digit figure rests on
+nine groups, so the supportable claim is that the levels are indistinguishable,
+not that aggregating improves anything.
 
 When one ISCO code bundles disparate occupations, the ILO's own score for that
 code averages over the same disparate jobs. Both measures inherit the

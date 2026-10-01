@@ -286,6 +286,46 @@ def test_within_code_spread_does_not_predict_disagreement(validation):
 
 
 @needs_validation
+def test_the_direct_spread_test_finds_nothing(validation):
+    """
+    The sharpest form of the negative result, and the one the README leads on.
+
+    Rank every code by both measures, take the absolute rank discrepancy, and
+    correlate it against the within-code spread. If the spread measured damage
+    done by the crossing, this would be clearly positive. It is not.
+    """
+    t = validation["does_the_spread_predict_disagreement"]["direct_test"]
+    assert abs(t["spearman_spread_vs_rank_discrepancy"]) < 0.15
+    assert t["p"] > 0.05, "the spread started predicting discrepancy; revisit the README"
+    assert abs(t["multi_source_only"]["spearman"]) < 0.15
+    assert t["multi_source_only"]["p"] > 0.05
+
+
+@needs_validation
+def test_aggregation_claim_is_not_overread(validation):
+    """
+    Point estimates rise as ISCO groups get coarser. The intervals widen
+    faster. This pins the honest reading: the levels are not distinguishable,
+    so nobody should claim aggregation improves agreement.
+    """
+    lv = validation["agreement_by_aggregation_level"]
+    four = lv["4_digit_unit_group"]
+    two = lv["2_digit_sub_major"]
+    one = lv["1_digit_major"]
+
+    assert two["n_groups"] < 50 and one["n_groups"] < 15
+    # The coarse estimates must not be treated as separate from the fine one.
+    assert two["ci95"][0] <= four["spearman"] <= two["ci95"][1], (
+        "the 2-digit interval no longer contains the 4-digit estimate, so the "
+        "claim that the levels are indistinguishable would need rechecking"
+    )
+    assert one["ci95"][1] - one["ci95"][0] > 0.3, (
+        "the 1-digit interval got narrow enough to be worth quoting, which "
+        "nine groups should not allow"
+    )
+
+
+@needs_validation
 def test_filtering_on_the_spread_does_not_help(validation):
     """Dropping high-spread codes should not buy a meaningfully better ranking."""
     base = validation["agreement"]["spearman"]

@@ -6,7 +6,7 @@ the transfer.
 
 Aditya Garg. Built 1 October 2026.
 
-![AIOE carried onto ISCO-08: the ranking transfers, the individual scores carry bundling noise](docs/transfer_error.png)
+![422 ISCO-08 codes ranked by mean AIOE, with the range of the SOC occupations bundled into each](docs/transfer_error.png)
 
 ## Why this exists
 
@@ -41,7 +41,7 @@ it breaks.
 | Mean within-ISCO standard deviation | 0.345 |
 | Widest within-ISCO spread | 2.638 |
 | Spearman, mean-based vs random-single-pick ranking | 0.960 |
-| **Spearman vs an independent ISCO-native measure** | **0.818** |
+| **Spearman vs an independent ISCO-native measure** | **0.818** [0.78, 0.85] |
 
 AIOE is standardised to unit variance across occupations, so the within-ISCO
 figures are directly readable as fractions of the whole signal.
@@ -55,6 +55,11 @@ section on checking it explains why.
 The within-code spread is still reported for every code, but read on before
 using it as a quality filter. It does not work as one, and finding that out is
 the most useful thing in this repository.
+
+Claims this repository has withdrawn, kept here rather than quietly deleted:
+that the within-code spread measures transfer error and can be filtered on, and
+that coarser ISCO aggregation measurably degrades agreement. Both were tested
+and neither survived.
 
 ## Using it
 
@@ -70,8 +75,8 @@ lfs = pd.read_csv("your_labour_force_survey.csv", dtype={"isco08": str})
 df = lfs.merge(cw, left_on="isco08", right_on="isco_08", how="left")
 
 # aioe_sd tells you how much the occupations inside a code disagree.
-# Useful for interpreting a single code. Do NOT use it as a quality
-# filter on the ranking: see "Checking it rather than believing it".
+# Useful for reading one code. NOT a quality filter: the validation
+# section below shows it does not predict anything.
 ```
 
 | Column | Meaning |
@@ -99,9 +104,8 @@ codes, and one ISCO code can draw on several SOC codes. Where an ISCO code
 draws on several SOC codes, those SOC codes carry different AIOE scores, and
 something has to be done about the disagreement.
 
-The usual move is to take a mean and move on. The disagreement does not
-disappear when you do that. It becomes measurement error in the resulting
-ISCO-level score, invisible to anyone downstream who uses the number.
+The usual move is to take a mean and move on. Whether that costs anything is
+an empirical question, and this repository answered it wrongly at first.
 
 ISCO 3423, fitness and recreation instructors, shows the shape of it:
 
@@ -113,15 +117,17 @@ ISCO 3423, fitness and recreation instructors, shows the shape of it:
 | 25-3021 | Self-Enrichment Education Teachers | +0.526 |
 
 The mean of those four is −0.372, and no occupation in the group is anywhere
-near it. A study that assigns −0.372 to everyone coded 3423 has introduced a
-2.6 standard deviation spread and recorded none of it.
+near it. Anyone reading 3423's score as a description of one job is reading
+something that describes none of them. So every row of the output ships the
+spread beside the score.
 
-So every row of the output ships the spread beside the score.
-
-The obvious inference, and the one this repository originally drew, is that
-codes like 3423 are unreliable and should be dropped. Testing against an
-independent measure showed that inference was wrong. The spread is real, but it
-describes the occupational category rather than the crossing.
+The tempting next step, and the one this repository originally took, is to
+conclude that 3423's score is therefore unreliable and should be dropped from
+an analysis. Testing against an independent ISCO-native measure showed that
+conclusion was wrong. Codes like 3423 sit no further from the independent
+measure than clean ones do, because any measure defined on ISCO has to average
+the same four jobs. The spread is real and worth reporting. It describes the
+occupational category, not damage done by the crossing.
 
 ## Method
 
@@ -166,8 +172,12 @@ SOC-level AIOE across ISCO groups, with
     n0 = (Σn − Σn² / Σn) / (k − 1)
 
 as the effective group size. The reported ICC is the share of total AIOE
-variance lying between ISCO codes rather than within them. This is the
-headline number. Near 1 means occupations folded into the same ISCO code agree
+variance lying between ISCO codes rather than within them. It is an internal
+measure, computed entirely from AIOE, so it says how much structure the ISCO
+grouping preserves and nothing about whether the result is right. The external
+check is the ILO comparison further down.
+
+Near 1 means occupations folded into the same ISCO code agree
 about their exposure and the ranking transfers. Near 0 means an ISCO code's
 score is mostly an artefact of which SOC codes happened to land in it.
 
@@ -251,7 +261,10 @@ the crossing rather than evidence about AIOE.
 
 ![Crosswalked AIOE against the ILO ISCO-native index, and the within-code spread failing to predict disagreement](docs/validation.png)
 
-Across the 416 unit groups both measures cover, Spearman rho is **0.818**.
+Across the 416 unit groups both measures cover, Spearman rho is **0.818**,
+with a bootstrap 95 percent interval of [0.782, 0.849]. Dropping the top and
+bottom 5 percent of AIOE leaves it at 0.797, so it is not an artefact of the
+extremes.
 
 The two constructs are not identical. AIOE scores exposure to AI capability;
 the ILO index scores the automation potential of tasks under generative AI. So
@@ -265,16 +278,26 @@ The within-code spread looks like transfer error. An earlier version of this
 README told people to drop codes where it was large. That advice was wrong, and
 the independent measure is what revealed it.
 
-| group | n | mean within-code sd | Spearman vs ILO |
-|---|---|---|---|
-| single-source codes | 155 | 0.000 | 0.790 |
-| multi-source, cleanest third | 87 | 0.105 | 0.810 |
-| multi-source, middle third | 91 | 0.301 | 0.819 |
-| multi-source, messiest third | 83 | 0.645 | 0.798 |
+The direct test is this. Rank every code by both measures, take the absolute
+rank discrepancy, and correlate it against the within-code spread. If the
+spread measured damage done by the crossing, codes carrying more of it would
+sit further from the independent measure.
 
-Spread rises from zero to 0.645 across those groups. Agreement does not move.
-The codes that bundle the most disparate occupations agree with an independent
-measure slightly *better* than the clean ones. Filtering the whole set at
+    Spearman(within-code spread, |rank discrepancy|) = -0.032,  p = 0.51
+    multi-source codes only                          = +0.009,  p = 0.89
+
+There is no relationship. The grouped version tells the same story:
+
+| group | n | mean within-code sd | Spearman vs ILO | 95% CI |
+|---|---|---|---|---|
+| single-source codes | 155 | 0.000 | 0.790 | |
+| multi-source, cleanest third | 87 | 0.105 | 0.810 | [0.71, 0.88] |
+| multi-source, middle third | 91 | 0.301 | 0.819 | [0.71, 0.89] |
+| multi-source, messiest third | 88 | 0.645 | 0.792 | [0.71, 0.85] |
+
+Spread rises from zero to 0.645 across those groups and agreement does not
+move. The intervals overlap almost completely, so the ordering between them
+means nothing and should not be read as one. Filtering the whole set at
 thresholds of 0.75, 0.50, 0.35 and 0.25 moves rho to 0.821, 0.825, 0.811 and
 0.805, which is noise.
 
@@ -288,6 +311,26 @@ conflated them until the data said otherwise.
 
 `aioe_sd` is still worth reading when you care about one particular code. It is
 not a quality filter, and nothing here should be used as one.
+
+### Agreement at coarser ISCO levels
+
+Cross-country employment data often arrives at 2-digit or 1-digit ISCO rather
+than unit groups, so it is worth knowing whether the crossing still holds up
+after aggregation.
+
+| level | groups | Spearman vs ILO | 95% CI |
+|---|---|---|---|
+| 4-digit unit group | 416 | 0.818 | [0.78, 0.85] |
+| 3-digit minor | 126 | 0.855 | [0.80, 0.89] |
+| 2-digit sub-major | 40 | 0.843 | [0.66, 0.94] |
+| 1-digit major | 9 | 0.933 | [0.48, 1.00] |
+
+The point estimates drift upward, and it is tempting to conclude that
+aggregating helps. The intervals say otherwise. They widen faster than the
+estimates rise, the 2-digit interval contains the 4-digit estimate, and the
+1-digit figure rests on nine groups. The supportable claim is that agreement is
+indistinguishable across aggregation levels, which is still useful: working at
+2-digit, as cross-country data often forces you to, costs nothing measurable.
 
 To reproduce:
 

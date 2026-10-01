@@ -13,8 +13,49 @@
   },
   "agreement": {
     "spearman": 0.8184972225469209,
+    "spearman_ci95": [
+      0.7824439693748042,
+      0.8486407757784082
+    ],
     "spearman_p": 1.0690609639231053e-101,
-    "pearson": 0.7958623157583447
+    "pearson": 0.7958623157583447,
+    "spearman_middle_90pct_of_aioe": 0.7967046409245863,
+    "note_on_trim": "Dropping the top and bottom 5% of AIOE leaves rho at 0.797, so the headline is not an artefact of the extremes."
+  },
+  "agreement_by_aggregation_level": {
+    "4_digit_unit_group": {
+      "n_groups": 416,
+      "spearman": 0.8184972225469209,
+      "ci95": [
+        0.7824439693748042,
+        0.8486407757784082
+      ]
+    },
+    "3_digit_minor": {
+      "n_groups": 126,
+      "spearman": 0.8552469763845966,
+      "ci95": [
+        0.7962168834938868,
+        0.8949993561228398
+      ]
+    },
+    "2_digit_sub_major": {
+      "n_groups": 40,
+      "spearman": 0.8429744543446019,
+      "ci95": [
+        0.6613430635784092,
+        0.9430439901844881
+      ]
+    },
+    "1_digit_major": {
+      "n_groups": 9,
+      "spearman": 0.9333333333333332,
+      "ci95": [
+        0.47826086956521746,
+        1.0
+      ]
+    },
+    "reading": "The point estimates drift upward as groups get coarser, but the intervals widen faster. The 2-digit interval contains the 4-digit estimate and the 1-digit one rests on nine groups. The supportable claim is that agreement is indistinguishable across aggregation levels, NOT that coarsening improves it."
   },
   "does_the_spread_predict_disagreement": {
     "single_source": {
@@ -25,21 +66,43 @@
       "n": 261,
       "spearman": 0.8251033046152274
     },
+    "direct_test": {
+      "description": "The tercile split below is coarse. This is the direct test: rank every code by both measures and correlate the absolute rank discrepancy against the within-code spread. If the spread measured crosswalk damage, codes with more of it would sit further from the independent measure.",
+      "spearman_spread_vs_rank_discrepancy": -0.03229075729404039,
+      "p": 0.5113131392693055,
+      "multi_source_only": {
+        "n": 261,
+        "spearman": 0.008579021974459405,
+        "p": 0.8902912930953735
+      }
+    },
     "multi_source_by_spread_tercile": {
       "cleanest": {
         "n": 87,
         "mean_within_sd": 0.10465859733285017,
-        "spearman": 0.8102734825050767
+        "spearman": 0.8102734825050767,
+        "ci95": [
+          0.7098698982204191,
+          0.8758266004672354
+        ]
       },
       "middle": {
         "n": 91,
         "mean_within_sd": 0.30149746227635077,
-        "spearman": 0.8192075217758042
+        "spearman": 0.8192075217758042,
+        "ci95": [
+          0.7122560598655306,
+          0.8894717337268427
+        ]
       },
       "messiest": {
         "n": 83,
         "mean_within_sd": 0.6445931756204119,
-        "spearman": 0.7982373399271286
+        "spearman": 0.7982373399271286,
+        "ci95": [
+          0.7141638130931296,
+          0.851517242815469
+        ]
       }
     },
     "filtering_on_published_spread": {
@@ -60,6 +123,6 @@
         "spearman": 0.8054248642091183
       }
     },
-    "verdict": "No. Bundled codes agree with the independent measure at least as well as clean ones, and filtering on the within-code spread does not improve agreement. The spread reflects heterogeneity inside the occupational category, which any ISCO-level measure inherits, rather than error introduced by the crossing."
+    "verdict": "No. The direct test finds no relationship between the within-code spread and how far a code sits from the independent measure. Bundled codes agree at least as well as clean ones, the tercile intervals overlap heavily, and filtering on the spread does not improve agreement. The spread reflects heterogeneity inside the occupational category, which any ISCO-level measure inherits, rather than error introduced by the crossing."
   }
 }

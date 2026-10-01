@@ -32,7 +32,7 @@ import urllib.request
 
 import numpy as np
 import pandas as pd
-from scipy.stats import pearsonr, spearmanr
+from scipy.stats import pearsonr, rankdata, spearmanr
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(HERE, "out")
@@ -80,10 +80,62 @@ def rho(a, b):
     return float(spearmanr(a, b).statistic)
 
 
+def rho_ci(a, b, draws=2000, seed=7):
+    """Bootstrap percentile interval for a Spearman correlation.
+
+    Point estimates on small groups are easy to over-read. Every rho this
+    script reports for a subgroup carries one of these so the reader can see
+    whether a difference is real.
+    """
+    a = np.asarray(a, dtype=float)
+    b = np.asarray(b, dtype=float)
+    rng = np.random.default_rng(seed)
+    n = len(a)
+    vals = []
+    for _ in range(draws):
+        i = rng.integers(0, n, n)
+        v = spearmanr(a[i], b[i]).statistic
+        if not np.isnan(v):
+            vals.append(v)
+    return [float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))]
+
+
+def agreement_by_level(pairs, ilo):
+    """Agreement at each ISCO aggregation level, with intervals.
+
+    Coarser levels have fewer groups, so their intervals widen fast. Reporting
+    the point estimates alone invites exactly the wrong conclusion.
+    """
+    out = {}
+    for lvl, name in ((4, "4_digit_unit_group"), (3, "3_digit_minor"),
+                      (2, "2_digit_sub_major"), (1, "1_digit_major")):
+        a = pairs.assign(k=pairs["isco_08"].str[:lvl]).groupby("k")["aioe"].mean()
+        b = ilo.assign(k=ilo["isco_08"].str[:lvl]).groupby("k")["ilo_2025"].mean()
+        j = pd.concat([a.rename("x"), b.rename("y")], axis=1).dropna()
+        out[name] = {
+            "n_groups": int(len(j)),
+            "spearman": rho(j["x"], j["y"]),
+            "ci95": rho_ci(j["x"], j["y"]),
+        }
+    return out
+
+
 def main():
     ilo = load_ilo(fetch_ilo())
     cw = pd.read_csv(os.path.join(OUT, "isco08_aioe.csv"), dtype={"isco_08": str})
     m = cw.merge(ilo, on="isco_08", how="inner")
+
+    # Rank discrepancy between the two measures, for the direct test.
+    m["abs_rank_discrepancy"] = np.abs(
+        rankdata(m["aioe_mean"]) - rankdata(m["ilo_2025"])
+    )
+
+    lo, hi = m["aioe_mean"].quantile([0.05, 0.95])
+    trim = m[(m["aioe_mean"] > lo) & (m["aioe_mean"] < hi)]
+
+    pairs_long = pd.read_csv(
+        os.path.join(OUT, "soc_isco_pairs.csv"), dtype={"isco_08": str}
+    ).dropna(subset=["aioe"])
 
     single = m[m["n_soc"] == 1]
     multi = m[m["n_soc"] > 1].copy()
@@ -96,6 +148,7 @@ def main():
             "n": int(len(grp)),
             "mean_within_sd": float(grp["aioe_sd"].mean()),
             "spearman": rho(grp["aioe_mean"], grp["ilo_2025"]),
+            "ci95": rho_ci(grp["aioe_mean"], grp["ilo_2025"]),
         }
         for lab, grp in multi.groupby("tercile", observed=True)
     }
@@ -127,8 +180,25 @@ def main():
         },
         "agreement": {
             "spearman": rho(m["aioe_mean"], m["ilo_2025"]),
+            "spearman_ci95": rho_ci(m["aioe_mean"], m["ilo_2025"]),
             "spearman_p": float(spearmanr(m["aioe_mean"], m["ilo_2025"]).pvalue),
             "pearson": float(pearsonr(m["aioe_mean"], m["ilo_2025"])[0]),
+            "spearman_middle_90pct_of_aioe": rho(trim["aioe_mean"], trim["ilo_2025"]),
+            "note_on_trim": (
+                "Dropping the top and bottom 5% of AIOE leaves rho at "
+                f"{rho(trim['aioe_mean'], trim['ilo_2025']):.3f}, so the "
+                "headline is not an artefact of the extremes."
+            ),
+        },
+        "agreement_by_aggregation_level": {
+            **agreement_by_level(pairs_long, ilo),
+            "reading": (
+                "The point estimates drift upward as groups get coarser, but "
+                "the intervals widen faster. The 2-digit interval contains the "
+                "4-digit estimate and the 1-digit one rests on nine groups. "
+                "The supportable claim is that agreement is indistinguishable "
+                "across aggregation levels, NOT that coarsening improves it."
+            ),
         },
         "does_the_spread_predict_disagreement": {
             "single_source": {
@@ -139,14 +209,39 @@ def main():
                 "n": int(len(multi)),
                 "spearman": rho(multi["aioe_mean"], multi["ilo_2025"]),
             },
+            "direct_test": {
+                "description": (
+                    "The tercile split below is coarse. This is the direct "
+                    "test: rank every code by both measures and correlate the "
+                    "absolute rank discrepancy against the within-code spread. "
+                    "If the spread measured crosswalk damage, codes with more "
+                    "of it would sit further from the independent measure."
+                ),
+                "spearman_spread_vs_rank_discrepancy": float(
+                    spearmanr(m["aioe_sd"], m["abs_rank_discrepancy"]).statistic
+                ),
+                "p": float(spearmanr(m["aioe_sd"], m["abs_rank_discrepancy"]).pvalue),
+                "multi_source_only": {
+                    "n": int(len(multi)),
+                    "spearman": float(
+                        spearmanr(multi["aioe_sd"], multi["abs_rank_discrepancy"]).statistic
+                    ),
+                    "p": float(
+                        spearmanr(multi["aioe_sd"], multi["abs_rank_discrepancy"]).pvalue
+                    ),
+                },
+            },
             "multi_source_by_spread_tercile": by_tercile,
             "filtering_on_published_spread": thresholds,
             "verdict": (
-                "No. Bundled codes agree with the independent measure at least "
-                "as well as clean ones, and filtering on the within-code spread "
-                "does not improve agreement. The spread reflects heterogeneity "
-                "inside the occupational category, which any ISCO-level measure "
-                "inherits, rather than error introduced by the crossing."
+                "No. The direct test finds no relationship between the "
+                "within-code spread and how far a code sits from the "
+                "independent measure. Bundled codes agree at least as well as "
+                "clean ones, the tercile intervals overlap heavily, and "
+                "filtering on the spread does not improve agreement. The "
+                "spread reflects heterogeneity inside the occupational "
+                "category, which any ISCO-level measure inherits, rather than "
+                "error introduced by the crossing."
             ),
         },
     }
