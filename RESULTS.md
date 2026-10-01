@@ -98,10 +98,12 @@ within 0.04 Spearman of every other. It is a second-order concern.
 The first-order concern is different, and it is the one to report loudly.
 Eighty-six percent of the BLS pairs are flagged as **partial** matches rather
 than full correspondences, and 62 percent of ISCO codes draw on several SOC
-occupations. The crosswalk should therefore ship the within-ISCO spread
-alongside every score, so a user can drop the codes where the bundled
-occupations disagree violently. The 2.64 case is not a number anyone should
-use without knowing what is inside it.
+occupations. The crosswalk therefore ships the within-ISCO spread
+alongside every score. The 2.64 case is not a number anyone should use without
+knowing what is inside it.
+
+It does not follow that those codes should be dropped, which is what an earlier
+version of this document recommended. See the validation section below.
 
 ## Reproducing this
 
@@ -123,3 +125,40 @@ python src/build_crosswalk.py
 Dropping the original `ISCO_SOC_Crosswalk.xls` into `data/` also works. The
 parser reads either the workbook or the reduced CSV, and takes the
 partial-match flag from the asterisk in the column headed "part".
+
+## Validation against an ISCO-native measure
+
+Every figure above is internal to AIOE. Gmyrek et al. (2025), ILO Working Paper
+140, built an occupational exposure index directly on ISCO-08 from Polish task
+descriptions scored by 1,640 workers and then by two language models. It shares
+no inputs with AIOE and never goes through a crosswalk.
+
+| | |
+|---|---|
+| ISCO-08 unit groups covered by both | 416 |
+| Spearman, crosswalked AIOE vs ILO index | 0.818 |
+| Pearson | 0.796 |
+
+The constructs differ. AIOE scores exposure to AI capability, the ILO index
+scores automation potential of tasks under generative AI, so part of the gap is
+construct rather than transfer loss.
+
+### The within-code spread does not predict disagreement
+
+| group | n | mean within-code sd | Spearman vs ILO |
+|---|---|---|---|
+| single-source codes | 155 | 0.000 | 0.790 |
+| multi-source, cleanest third | 87 | 0.105 | 0.810 |
+| multi-source, middle third | 91 | 0.301 | 0.819 |
+| multi-source, messiest third | 83 | 0.645 | 0.798 |
+
+Spread rises from zero to 0.645. Agreement is flat. Filtering the full set at
+0.75, 0.50, 0.35 and 0.25 gives 0.821, 0.825, 0.811 and 0.805 against a
+baseline of 0.818.
+
+When one ISCO code bundles disparate occupations, the ILO's own score for that
+code averages over the same disparate jobs. Both measures inherit the
+heterogeneity, so it cancels rather than accumulating. The within-code spread
+describes the occupational category, not damage done by the crossing.
+
+Reproduce with `make validate`.

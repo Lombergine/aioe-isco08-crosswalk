@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .pytest_cache/
+
+# Third-party data fetched at build time, not redistributed here.
+# ILO WP140 GenAI exposure scores (Gmyrek et al. 2025), pulled from
+# https://github.com/pgmyrek/2025_GenAI_scores_ISCO08
+data/external/

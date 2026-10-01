@@ -1,0 +1,65 @@
+{
+  "external_measure": {
+    "source": "Gmyrek et al. (2025), ILO Working Paper 140",
+    "url": "https://github.com/pgmyrek/2025_GenAI_scores_ISCO08",
+    "native_classification": "ISCO-08, no crosswalk involved",
+    "construct": "automation potential of tasks under generative AI",
+    "note": "AIOE measures exposure to AI capability; the two constructs overlap but are not identical, so part of any gap is construct difference rather than transfer loss."
+  },
+  "coverage": {
+    "ilo_unit_groups": 427,
+    "crosswalk_unit_groups": 422,
+    "matched": 416
+  },
+  "agreement": {
+    "spearman": 0.8184972225469209,
+    "spearman_p": 1.0690609639231053e-101,
+    "pearson": 0.7958623157583447
+  },
+  "does_the_spread_predict_disagreement": {
+    "single_source": {
+      "n": 155,
+      "spearman": 0.7902058907443188
+    },
+    "multi_source": {
+      "n": 261,
+      "spearman": 0.8251033046152274
+    },
+    "multi_source_by_spread_tercile": {
+      "cleanest": {
+        "n": 87,
+        "mean_within_sd": 0.10465859733285017,
+        "spearman": 0.8102734825050767
+      },
+      "middle": {
+        "n": 91,
+        "mean_within_sd": 0.30149746227635077,
+        "spearman": 0.8192075217758042
+      },
+      "messiest": {
+        "n": 83,
+        "mean_within_sd": 0.6445931756204119,
+        "spearman": 0.7982373399271286
+      }
+    },
+    "filtering_on_published_spread": {
+      "aioe_sd_under_0.75": {
+        "n": 399,
+        "spearman": 0.8212487953832565
+      },
+      "aioe_sd_under_0.5": {
+        "n": 359,
+        "spearman": 0.8251653367368192
+      },
+      "aioe_sd_under_0.35": {
+        "n": 309,
+        "spearman": 0.8113504180162937
+      },
+      "aioe_sd_under_0.25": {
+        "n": 268,
+        "spearman": 0.8054248642091183
+      }
+    },
+    "verdict": "No. Bundled codes agree with the independent measure at least as well as clean ones, and filtering on the within-code spread does not improve agreement. The spread reflects heterogeneity inside the occupational category, which any ISCO-level measure inherits, rather than error introduced by the crossing."
+  }
+}

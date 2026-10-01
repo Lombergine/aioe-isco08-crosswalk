@@ -41,15 +41,20 @@ it breaks.
 | Mean within-ISCO standard deviation | 0.345 |
 | Widest within-ISCO spread | 2.638 |
 | Spearman, mean-based vs random-single-pick ranking | 0.960 |
+| **Spearman vs an independent ISCO-native measure** | **0.818** |
 
 AIOE is standardised to unit variance across occupations, so the within-ISCO
 figures are directly readable as fractions of the whole signal.
 
-Two conclusions follow. The ISCO-level ranking is sound, because 83 percent of
-the variance sits between codes and every aggregation rule tested produces
-almost the same ordering. The individual scores are shakier than the ranking,
-because most pairs are partial matches and some ISCO codes bundle occupations
-that disagree sharply about their own exposure.
+The ranking transfers. 83 percent of the variance sits between codes, every
+aggregation rule tested produces almost the same ordering, and the result
+correlates at 0.818 with an exposure index built natively on ISCO-08 from
+entirely separate data. That last number is the one that matters, and the
+section on checking it explains why.
+
+The within-code spread is still reported for every code, but read on before
+using it as a quality filter. It does not work as one, and finding that out is
+the most useful thing in this repository.
 
 ## Using it
 
@@ -64,9 +69,9 @@ lfs = pd.read_csv("your_labour_force_survey.csv", dtype={"isco08": str})
 
 df = lfs.merge(cw, left_on="isco08", right_on="isco_08", how="left")
 
-# Drop the codes where the bundled occupations disagree badly before
-# using the score as if it described one job.
-clean = df[df["aioe_sd"] < 0.5]
+# aioe_sd tells you how much the occupations inside a code disagree.
+# Useful for interpreting a single code. Do NOT use it as a quality
+# filter on the ranking: see "Checking it rather than believing it".
 ```
 
 | Column | Meaning |
@@ -81,9 +86,11 @@ clean = df[df["aioe_sd"] < 0.5]
 | `aioe_range` | `aioe_max` minus `aioe_min` |
 | `soc_codes` | The contributing SOC codes, pipe separated |
 
-AIOE is standardised across occupations, so `aioe_sd` is directly comparable to
-1. A code with `aioe_sd` of 0.5 carries transfer noise half as large as the
-entire signal, and the choice of threshold belongs to whoever is using it.
+AIOE is standardised across occupations, so `aioe_sd` is directly comparable
+to 1. A code with `aioe_sd` of 0.5 bundles occupations whose exposure differs
+by half the spread of the entire measure, which matters if you are reading that
+one code. It does not, as it turns out, tell you whether the code's score is
+wrong.
 
 ## The problem the crosswalk has to face
 
@@ -109,8 +116,12 @@ The mean of those four is −0.372, and no occupation in the group is anywhere
 near it. A study that assigns −0.372 to everyone coded 3423 has introduced a
 2.6 standard deviation spread and recorded none of it.
 
-So every row of the output ships the spread beside the score, and anyone using
-the crosswalk can drop the codes where the bundled occupations disagree badly.
+So every row of the output ships the spread beside the score.
+
+The obvious inference, and the one this repository originally drew, is that
+codes like 3423 are unreliable and should be dropped. Testing against an
+independent measure showed that inference was wrong. The spread is real, but it
+describes the occupational category rather than the crossing.
 
 ## Method
 
@@ -138,10 +149,16 @@ difference should be stated rather than discovered later.
 code. Single-source ISCO codes carry a clean transfer. Multi-source ones
 carry a blend.
 
-**Transfer error.** For every multi-source ISCO code, the spread of the
+**Within-code spread.** For every multi-source ISCO code, the spread of the
 contributing AIOE scores. Since AIOE has a standard deviation of 1 across all
-occupations, a within-ISCO standard deviation of 0.5 means the transfer
-introduces noise half as large as the entire signal.
+occupations, a within-ISCO standard deviation of 0.5 means the code bundles
+jobs whose exposure differs by half the range of the measure.
+
+This was originally called transfer error, on the assumption that it measured
+damage done by the crossing. Validation against an independent ISCO-native
+index showed that it does not. It is a property of the occupational category,
+inherited by any measure defined at that level. The name was changed to match
+what the number actually is.
 
 **Variance decomposition.** A one-way random-effects decomposition of
 SOC-level AIOE across ISCO groups, with
@@ -219,13 +236,77 @@ running anything:
 - `diagnostics.json` every number quoted above
 - `unmatched_soc.csv` the three AIOE occupations the crosswalk never reaches
 
-## Checking it rather than believing it
+## Checking it against something that never saw AIOE
+
+Everything above is internal. The variance decomposition, the resampling check
+and the rank correlations all describe how AIOE behaves when it is moved onto
+ISCO-08, but every one of them descends from AIOE, so none of them can say
+whether the result is right.
+
+Gmyrek et al. (2025), ILO Working Paper 140, built an occupational exposure
+index directly on ISCO-08. It comes from Polish task descriptions scored by
+1,640 workers and then by two language models. It shares no inputs with AIOE
+and never touches a crosswalk. Agreement with it is therefore evidence about
+the crossing rather than evidence about AIOE.
+
+![Crosswalked AIOE against the ILO ISCO-native index, and the within-code spread failing to predict disagreement](docs/validation.png)
+
+Across the 416 unit groups both measures cover, Spearman rho is **0.818**.
+
+The two constructs are not identical. AIOE scores exposure to AI capability;
+the ILO index scores the automation potential of tasks under generative AI. So
+perfect agreement was never on the table, and some of the remaining gap is
+construct difference rather than transfer loss. The true fidelity of the
+crossing is probably better than 0.818.
+
+### The result that changed this repository
+
+The within-code spread looks like transfer error. An earlier version of this
+README told people to drop codes where it was large. That advice was wrong, and
+the independent measure is what revealed it.
+
+| group | n | mean within-code sd | Spearman vs ILO |
+|---|---|---|---|
+| single-source codes | 155 | 0.000 | 0.790 |
+| multi-source, cleanest third | 87 | 0.105 | 0.810 |
+| multi-source, middle third | 91 | 0.301 | 0.819 |
+| multi-source, messiest third | 83 | 0.645 | 0.798 |
+
+Spread rises from zero to 0.645 across those groups. Agreement does not move.
+The codes that bundle the most disparate occupations agree with an independent
+measure slightly *better* than the clean ones. Filtering the whole set at
+thresholds of 0.75, 0.50, 0.35 and 0.25 moves rho to 0.821, 0.825, 0.811 and
+0.805, which is noise.
+
+The explanation is that when ISCO 3423 bundles fitness trainers with
+self-enrichment teachers, the ILO's score for 3423 is also an average over
+those same disparate jobs. Both measures inherit the same heterogeneity, so it
+cancels rather than accumulating. The within-code spread measures how internally
+varied an occupational category is. It does not measure how much the crossing
+damaged the score. Those are different quantities, and this repository
+conflated them until the data said otherwise.
+
+`aioe_sd` is still worth reading when you care about one particular code. It is
+not a quality filter, and nothing here should be used as one.
+
+To reproduce:
+
+```
+make validate
+```
+
+That fetches the ILO file into `data/external/`, writes `out/validation.json`
+and `out/validation_pairs.csv`, and redraws the figure above. The ILO workbook
+is published without an explicit licence, so it is fetched at run time rather
+than redistributed here.
+
+## The test suite
 
 ```
 make test
 ```
 
-Sixteen tests, and they do more than check that the code runs.
+Nineteen tests, and they do more than check that the code runs.
 
 The integrity tests confirm the inputs are what this README says they are. AIOE
 still has mean 0 and standard deviation 1 across 774 occupations. The crosswalk
@@ -246,6 +327,12 @@ checks that a two-digit ISCO major group is dropped rather than zero-padded
 into a unit group that means something else, which is the error that would
 quietly corrupt the entire mapping.
 
+Three of the nineteen pin the validation result above, including the negative
+one. If bundled codes ever start agreeing *worse* than clean ones, the suite
+fails and the reasoning in this README needs revisiting. Those three skip
+cleanly when `make validate` has not been run, so the core suite still works
+offline.
+
 `tests/FIXTURE_ISCO_SOC_Crosswalk.xlsx` holds invented rows in the BLS layout.
 It exercises the workbook parser, it is labelled as invented, and it is never
 used as data. A test asserts that the reader for the committed CSV refuses that
@@ -265,6 +352,10 @@ potential uses." *Strategic Management Journal* 42(12).
 Chandar, B. and B. Klein Teeselink (2026). "How Does AI Change Labor Demand?
 Evidence from 41 Countries." Stanford Digital Economy Lab working paper,
 21 September 2026.
+
+Gmyrek, P., J. Berg et al. (2025). "Generative AI and jobs: A refined global
+index of occupational exposure." ILO Working Paper 140. Scores at
+https://github.com/pgmyrek/2025_GenAI_scores_ISCO08
 
 Bureau of Labor Statistics. "Crosswalk between the 2008 International
 Standard Classification of Occupations and the 2010 SOC."

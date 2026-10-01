@@ -227,3 +227,72 @@ def test_tidy_reader_accepts_the_committed_csv():
     t = bc.read_tidy(os.path.join(DATA, "ISCO_SOC_Crosswalk.csv"))
     assert t is not None
     assert len(t) == PUBLISHED["crosswalk_pairs"]
+
+# --------------------------------------------------- external validation --
+#
+# These depend on out/validation.json, which needs the ILO file and therefore
+# a network fetch. They skip rather than fail when it is absent, so the core
+# suite still runs offline.
+
+VALIDATION = os.path.join(OUT, "validation.json")
+needs_validation = pytest.mark.skipif(
+    not os.path.exists(VALIDATION),
+    reason="run `make validate` first; it fetches the ILO file over the network",
+)
+
+
+@pytest.fixture(scope="session")
+def validation():
+    with open(VALIDATION) as f:
+        return json.load(f)
+
+
+@needs_validation
+def test_crosswalk_recovers_an_independent_isco_native_measure(validation):
+    """
+    The ILO index is built directly on ISCO-08 from Polish task data. It shares
+    no inputs with AIOE and never goes through a crosswalk, so agreement is
+    evidence about the crossing rather than about AIOE.
+    """
+    assert validation["coverage"]["matched"] >= 400
+    assert validation["agreement"]["spearman"] == pytest.approx(0.8185, abs=5e-3)
+    assert validation["agreement"]["pearson"] == pytest.approx(0.7959, abs=5e-3)
+    assert validation["agreement"]["spearman_p"] < 1e-50
+
+
+@needs_validation
+def test_within_code_spread_does_not_predict_disagreement(validation):
+    """
+    This pins a negative result, and it is the reason the README no longer
+    tells anyone to filter on aioe_sd.
+
+    If the within-code spread measured crosswalk error, bundled codes would
+    agree with the independent measure less well than clean ones. They do not.
+    """
+    s = validation["does_the_spread_predict_disagreement"]
+    single = s["single_source"]["spearman"]
+    multi = s["multi_source"]["spearman"]
+    assert multi >= single, (
+        "multi-source codes stopped agreeing at least as well as single-source "
+        "ones; the README's reasoning would need revisiting"
+    )
+
+    terciles = s["multi_source_by_spread_tercile"]
+    spreads = [terciles[k]["mean_within_sd"] for k in ("cleanest", "middle", "messiest")]
+    rhos = [terciles[k]["spearman"] for k in ("cleanest", "middle", "messiest")]
+    assert spreads[0] < spreads[1] < spreads[2], "terciles are not ordered by spread"
+    # Spread rises roughly six-fold across the terciles. Agreement should stay flat.
+    assert max(rhos) - min(rhos) < 0.05, f"agreement moved with spread: {rhos}"
+
+
+@needs_validation
+def test_filtering_on_the_spread_does_not_help(validation):
+    """Dropping high-spread codes should not buy a meaningfully better ranking."""
+    base = validation["agreement"]["spearman"]
+    for key, row in validation["does_the_spread_predict_disagreement"][
+        "filtering_on_published_spread"
+    ].items():
+        assert abs(row["spearman"] - base) < 0.05, (
+            f"{key} changed agreement by more than 0.05, which would mean "
+            "filtering does something after all"
+        )
