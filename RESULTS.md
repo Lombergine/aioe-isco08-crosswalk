@@ -105,7 +105,21 @@ use without knowing what is inside it.
 
 ## Reproducing this
 
-These figures were computed in a browser session against the live BLS file
-because the build container cannot reach bls.gov. Put
-`ISCO_SOC_Crosswalk.xls` in `data/` and run `python src/build_crosswalk.py`
-to regenerate every number here from source.
+Every figure above was produced twice by separate implementations.
+
+The first pass parsed `ISCO_SOC_Crosswalk.xls` directly in a browser session,
+because the build environment could not reach bls.gov. The second pass ran the
+Python pipeline in this repository against `data/ISCO_SOC_Crosswalk.csv`, the
+same BLS sheet reduced to three columns. The two agree on every number here,
+including the variance decomposition and the thousand-draw resampling check.
+
+To regenerate:
+
+```
+pip install -r requirements.txt
+python src/build_crosswalk.py
+```
+
+Dropping the original `ISCO_SOC_Crosswalk.xls` into `data/` also works. The
+parser reads either the workbook or the reduced CSV, and takes the
+partial-match flag from the asterisk in the column headed "part".
